@@ -1,6 +1,6 @@
 
 .navbar-brand{
-	margin-left: 50px;
+	margin-left: 20px;
 	
 }
 .bg-light {
@@ -129,6 +129,7 @@ hr {
 #landingText{
 	margin-top: 3vw;	
 	text-align: center;
+	position:relative;
 }
 
 #landingText p{
@@ -148,11 +149,16 @@ hr {
 	font-family: 'Muli', sans-serif;
 }
 
+.bloglink{
+	padding: 0;
+}
 
 body{
-	font-size: calc(0.6em + 0.6vw);
 	background-image: url("images/fishbg.png");
 	background-repeat: repeat;
 	background-size: 200px;
+}
+.navbar{
+	font-size: 1.1em;
 }
 
