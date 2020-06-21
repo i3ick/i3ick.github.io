@@ -10,6 +10,22 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	
 	
+	<!-- Mail -->
+	
+	<script>
+$(document).ready(function(){
+    $('.hiddenMail').on('click',function(event)
+    {
+        event.preventDefault();
+        $(this).off("click");
+        var email = $(this).attr("data-email").replace(/DOT/,'.').replace(/DOT/,'.').replace(/AT/,'@').replace(/DOT/,'.').replace(/DASH/,'-');
+        $(this).removeClass("hiddenMail");
+        $(this).html(email);
+        $(this).attr("href","mailto:"+email);
+    });
+});
+</script>
+	
 	
 		<!-- CSS -->
 	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
@@ -28,6 +44,21 @@
 	
 	<!-- Font -->
 	<link href="https://fonts.googleapis.com/css2?family=Muli&display=swap" rel="stylesheet">
+	
+
+<script>
+$(document).ready(function(){
+    $('.hiddenMail').on('click',function(event)
+    {
+        event.preventDefault();
+        $(this).off("click");
+        var email = $(this).attr("data-email").replace(/DOT/,'.').replace(/DOT/,'.').replace(/AT/,'@').replace(/DOT/,'.').replace(/DASH/,'-');
+        $(this).removeClass("hiddenMail");
+        $(this).html(email);
+        $(this).attr("href","mailto:"+email);
+    });
+});
+</script>
 
 	
 </head>
@@ -70,11 +101,12 @@
   <div id ="landingText" class="container">
     <div class="row">
       <div class="col-md-9 d-none d-md-block mx-auto">
-	  
 	  <div class="title d-none d-md-block">Karlo Pavičić Ravlić</div>
-	  <p class="location">Paris/Zagreb <i class="fa fa-map-marker" style="font-size:1.5vw"></i></p>
+	  <p class="location">Paris/Zagreb <i class="fa fa-map-marker" style="font-size:1.5vw"></i>
+	  <a class="hiddenMail" href="#"data-email="karloDOTpavicicDASHravlicATeduDOTgobelinsDOTfr">Contact Me </a> <i class="fa fa-envelope" style="font-size:1.5vw"></i></p>
 	  <p>MA in Character Animation and Animated Filmmaking </p>
-	  <p>3D/2D animation, production design, style research, and compositing</p>
+	  <p><a href="animation.html">3D/2D animation,</a><a href="pd.html"> production design, style research, and compositing</a></p>
+	 
  
 		<br>
       </div>
