@@ -162,6 +162,10 @@ hr {
 	font-family: 'Muli', sans-serif;
 }
 
+.bold{
+	font-weight: 800;
+}
+
 .bloglink{
 	padding: 0;
 }
