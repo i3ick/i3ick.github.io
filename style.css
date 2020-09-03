@@ -47,6 +47,16 @@
 	
 }
 
+.FestivalAwards{
+	color: #daa520;
+}
+
+.FestivalNominations ul {list-style-type: none; margin-left: -20px;}
+.FestivalNominations li:before { content: '⭐'; margin-left: -20px; } 
+
+.FestivalAwards ul {list-style-type: none; margin-left: -20px;}
+.FestivalAwards li:before { content: '🏆'; margin-left: -20px; } 
+
 .modal-dialog {
     max-width: 70vw;
     margin: 1.75rem auto;
