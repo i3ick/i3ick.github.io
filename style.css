@@ -139,25 +139,25 @@ hr {
 	opacity:40%;
 	object-fit: cover;
 	height: inherit;
-    filter: blur(3px);
+    filter: blur(4px);
 }
 
 #headerVideo{
-    background: white;
+    background: #d9e1ff;
     position: absolute;
     padding: 0px;
     height: 24vw;
+	margin-top: -20px;
 }
 
-#landingText{
-	margin-top: 3vw;	
+#landingText{	
 	text-align: center;
 	position:relative;
 }
 
 #landingText p{
 	color: black;
-    font-size: calc(0.6em + 0.6vw);
+    font-size: calc(0.8em + 0.6vw);
 	font-family: 'Muli', sans-serif;
 }
 
@@ -168,7 +168,7 @@ hr {
 
 #landingText .title{
 	color: black;
-	font-size: calc(0.6em + 0.6vw);
+	font-size: calc(1.8em + 0.6vw);
 	font-family: 'Muli', sans-serif;
 }
 
@@ -178,6 +178,10 @@ hr {
 
 .bloglink{
 	padding: 0;
+}
+
+a {
+    color: #0014ff;
 }
 
 body{
