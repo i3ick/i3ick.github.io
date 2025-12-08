@@ -9,10 +9,12 @@
 <!-- Import the component -->
 <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
 
-<model-viewer src="Tata_hipergraf_007.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1">
+<model-viewer style="width: 100vw; height: 100vh" src="Tata_hipergraf_007.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1">
+    
     <div class="progress-bar hide" slot="progress-bar">
         <div class="update-bar"></div>
     </div>
+    Model viewer is not supported on Firefox or Safari, sorry!
 </model-viewer>
 
 </body>
