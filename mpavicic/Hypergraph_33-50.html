@@ -2,9 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title> Hypergraph 33-d50</title>
+    <title>Hypergraph 33-50</title>
 </head>
 <body>
+
+<H1>Hypergraph 33-50</H1>
+<H3>Model by Karlo Pavičić Ravlić</H3>
 
 <!-- Import the component -->
 <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
@@ -15,6 +18,33 @@
         <div class="update-bar"></div>
     </div>
 </model-viewer>
+
+<script>
+(function() {
+  const mv = document.getElementById('mv');
+  const fallback = mv.querySelector('.mv-fallback');
+
+  // If Custom Elements are supported, wait for model-viewer to be defined,
+  // then remove/hide the fallback. If not supported, leave fallback visible.
+  if ('customElements' in window) {
+    const hideFallback = () => {
+      if (fallback) {
+        // remove from DOM so screen readers also ignore it once model-viewer works
+        fallback.remove();
+      }
+    };
+
+    const ctor = customElements.get('model-viewer');
+    if (ctor) {
+      // already defined
+      hideFallback();
+    } else {
+      // defined later (module still loading) — wait and then hide
+      customElements.whenDefined('model-viewer').then(hideFallback).catch(()=>{});
+    }
+  }
+})();
+</script>
 
 <noscript>
   <div class="no-js-fallback">Model viewer requires JavaScript. Please enable JS or view a static image.</div>
