@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hypergraph 33-50</title>
+</head>
+<body>
+
+<H1 style="text-align: center;">Hypergraph 33-50</H1>
+
+<!-- Import the component -->
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+
+<model-viewer style="width: 100vw; height: 80vh" src="Tata_hipergraf_007.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="" shadow-intensity="1">
+    
+    <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+    </div>
+</model-viewer>
+
+<H3 style="text-align: center;">Model by Karlo Pavičić Ravlić</H3>
+
+<script>
+(function() {
+  const mv = document.getElementById('mv');
+  const fallback = mv.querySelector('.mv-fallback');
+
+  // If Custom Elements are supported, wait for model-viewer to be defined,
+  // then remove/hide the fallback. If not supported, leave fallback visible.
+  if ('customElements' in window) {
+    const hideFallback = () => {
+      if (fallback) {
+        // remove from DOM so screen readers also ignore it once model-viewer works
+        fallback.remove();
+      }
+    };
+
+    const ctor = customElements.get('model-viewer');
+    if (ctor) {
+      // already defined
+      hideFallback();
+    } else {
+      // defined later (module still loading) — wait and then hide
+      customElements.whenDefined('model-viewer').then(hideFallback).catch(()=>{});
+    }
+  }
+})();
+</script>
+
+<noscript>
+  <div class="no-js-fallback">Model viewer requires JavaScript. Please enable JS or view a static image.</div>
+</noscript>
+
+</body>
+</html>
