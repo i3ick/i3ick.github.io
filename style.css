@@ -1,198 +1,385 @@
-
-.navbar-brand{
-	margin-left: 20px;
-	
-}
-.bg-light {
-    background-color: #c7d6e4!important;
-}
-
-
-.Gallery .title{
-	font-family: East Sea Dokdo;
-    font-size: 2em;
+:root {
+  --blue: #6f8fae;
+  --dark: #111;
+  --accent1: #5a8cb1;
+  --accent2: #d7c2a3;
+  --black: #2e2d2e;
 }
 
-.Gallery .description{
-    text-align: justify;
-    text-indent: 30px;
+* {
+  box-sizing: border-box;
 }
 
-
-#MovieGallery .title{
-	font-family: East Sea Dokdo;
-    font-size: 2em;
+@font-face {
+  font-family: Glacial; /* set name */
+  src: url(/fonts/glacial-indifference.regular.otf); /* url of the font */
 }
 
-#MovieGallery .description{
-    text-align: justify;
-    text-indent: 30px;
-    padding-left: 30px;
-    padding-right: 30px;
-	line-height: 1.3;
+p {
+  color: var(--black);
 }
 
-#MovieGallery .data{
-    font-weight: 700;
+@font-face {
+  font-family: Glacial;
+  src: url(/fonts/glacial-indifference.bold.otf);
+  font-weight: bold;
 }
-#MovieGallery .year{
-    position: relative;
+
+* {
+   font-family: Glacial, sans-serif;
 }
 
 
-#MovieGallery p{
-	margin-left: 10px;
-    padding: 10px;
-    text-align: center;
-	
+@font-face {
+  font-family: Fredoka;
+  src: url(/fonts/Fredoka-VariableFont_wdth,wght.ttf);
 }
 
-.FestivalAwards{
-	color: #daa520;
-}
-
-.FestivalNominations ul {list-style-type: none; margin-left: -20px;}
-.FestivalNominations li:before { content: '⭐'; margin-left: -20px; } 
-
-.FestivalAwards ul {list-style-type: none; margin-left: -20px;}
-.FestivalAwards li:before { content: '🏆'; margin-left: -20px; } 
-
-.modal-dialog {
-    max-width: 70vw;
-    margin: 1.75rem auto;
-}
-
-.s{
-    border-radius: 5px;
-    padding: 10px;
-    float: left;
-    margin: 10px;
-    width: 400px;
-    margin-bottom: 20px;
-}
-
-.Gallery{
-	margin-bottom:50px;
-	position:relative;
-	
-}
-
-
-.nanogallery_viewertheme_dark_Dogs .nGY2Viewer .toolbarBackground {
-        background: #000000c4 !important; 
-}
-
-
-video{
-	width: 50%;
-    object-fit: cover;
-	border-radius: 5px;
-}
-
-iframe{
-	border-radius: 5px;
-}
-
-#MovieGallery video{
-	width: 100%;
-    object-fit: cover;
-}
-
-video:focus{
-	outline:none;
-}
-
-html{
+html {
 	scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Glacial, sans-serif;
+  background: var(--accent2);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+/* HEADER / NAV */
+.header {
+  background: var(--accent1);
+  padding: 3px 24px;
+  overflow: visible;
+  display: grid;
+  grid-template-columns: 10vw 1fr;
+  gap: 30px;
+}
+
+.nav {
+  display: flex;
+  gap: 6%;
+  align-items: center;
+  padding-left: 83px;
+}
+
+.nav-item {
+  position: relative;
+  text-decoration: none;
+  font-size: 24px;
+  z-index: 1;
+  color: var(--black);
+}
+
+.nav-logo {
+  position: relative;
+  text-decoration: none;
+  padding-left: 2vw;
+  z-index: 1;  
+  display: inline-block;
+  overflow: hidden;
+  height: 3em;  
+  cursor: pointer;
+}
+
+.nav-logo span{
+  font-size: 38px;
+  display: block;
+  font-family: Fredoka;
+  font-weight: bold;
+  color: var(--accent2);
+  transition: transform 0.2s ease;
+  height: 1.5rem;
+}
+
+
+.nav-logo span:first-child {
+  transform: translateY(0);
+}
+
+.nav-logo span:last-child {
+  transform: translateY(300%);
+}
+
+.nav-logo:hover span:first-child {
+  transform: translateY(-600%);
+}
+
+.nav-logo:hover span:last-child {
+  transform: translateY(-100%);
+}
+
+
+
+.nav-item::before {
+  content: "";
+  position: absolute;
+  left: 38%;
+  top: -167%;
+  width: 110px;
+  height: 107px;
+  background: var(--accent2);
+  border-radius: 50%;
+  transform: translateX(-50%) scale(0.7);
+  transform-origin: center;
+  z-index: -1;
+  border: 5px solid var(--accent1);
+  margin-left: 1vw;
+  opacity: 0;
+  transition: 150ms cubic-bezier(.6,-0.28,.74,.05);
+}
+
+.nav-item:hover::before,
+.nav-item.active::before {
+  transform: translateX(-50%) scale(1);
+  transition: 400ms cubic-bezier(.18,.89,.32,1.28);
+  opacity: 1;
+}
+
+.nav-item:hover,
+.nav-item.active {
+  color: var(--accent1);
+}
+
+
+
+
+/* BANNER */
+.banner {
+  height: 230px;
+  background: var(--accent1);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 70vw 1fr;
+  gap: 10px;
+}
+
+.banner .video {
+  width: 100%;
+  z-index: 0;
+  position: relative;
+  
+}
+
+.logo {
+  position: relative;
+  color: var(--accent2);
+  font-weight: bold;
+  padding-right: 4vw;
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 87px;
+  font-family: Fredoka;
+  text-align: center;
+}
+
+.logo p {
+  margin: 6px 0 0;
+  font-size: 17px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+/* CONTENT */
+.content {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 25px;
+  padding: 30px;
+}
+
+
+.profile{
+  margin-left: 3vw;
+  margin-top: -13vh;
+  z-index: 1;
+  margin-left: 3vw;
+  width: 297px;
+  aspect-ratio: 1;
+  margin-top: -95px;
+}
+
+.profile h2 {
+margin-top: -83px;
+  color: var(--accent1);
+  letter-spacing: 2px;
+  font-size: 25.9px;
+  text-align: center;
+  line-height: 1.17;
+}
+
+.reel{
+  padding-left: 6vw;
+  padding-right: 6vw;
 
 }
 
-img{
-	border-radius: 3px;
-	
+
+.profile img {
+  height: 100%;
+  object-fit: cover;
+  clip-path: url(#blob-frame);
+  width: 100%;
+  border-radius: 134px;
 }
 
-.scroll-anchor {
-    top: -100px;
-    left: 0;
-	position:absolute;
+.reel .video {
+  aspect-ratio: 16 / 9;
+  border-radius: 16px;
 }
 
-p{
-margin-bottom: 0;	
+.reel h3 {
+  text-align: center;
+  margin-top: 16px;
+  letter-spacing: 45px;
+  color: var(--accent1);
+  font-weight: bold;
+  font-size: 17.9px;
 }
 
-hr {
-    margin-top: -0.2rem;
-    border-top: 1px solid rgba(0, 0, 0, 0.26);
+
+.svg .img {
+  href: url("/images/P1010436.png");   /* modern browsers */
+  width: 200px;
+  height: 200px;
 }
 
-#pd .links{
-	position:fixed;
-	font-family: East Sea Dokdo;
-    font-size: 25px;
-	margin:30px;
-	text-align: right;
+/* Projects */
+
+.Projects {
+	padding: 8%;
+	padding-top: 3%;
 }
 
-#headerVideo video{
-	width:100%;
-	opacity:40%;
-	object-fit: cover;
-	height: inherit;
-    filter: blur(4px);
+.Projects section{
+	margin-bottom: 3em;
 }
 
-#headerVideo{
-    background: #d9e1ff;
-    position: absolute;
-    padding: 0px;
-    height: 24vw;
-	margin-top: -20px;
+.ProjectContent {
+  display: grid;
+  grid-template-columns: 25% 1fr;
+  gap: 30px;
+  height: 100% 
 }
 
-#landingText{	
+.ProjectList {
+  padding: 3px 24px;
+  overflow: visible;
+  border-right: 6px solid var(--accent1);
+}
+  
+.ProjectList h1, .shortsTitle h1{
+	margin-bottom: 2rem;
 	text-align: center;
-	position:relative;
+	color: var(--accent1);
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
 }
 
-#landingText p{
+.title {
+	text-decoration: underline;
+	margin-bottom: 1em;
+	font-size: 30px;
+	color: var(--black);
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ProjectList li a {
+  display: block;
+  text-align: end;
+  text-decoration: none;
+  transition: 100ms;
+  padding-top:15px;
+}
+
+.ProjectList li a:hover {
+  padding-right:20px;
+  transition: 100ms;
+}
+
+
+  
+.project-nav-item {
+  position: relative;
+  text-decoration: none;
+  font-size: 24px;
+  z-index: 1;
+  color: var(--black);	
+}
+
+.Projects{
+
+}
+
+.Projects title{
+	font-size: 27px;
 	color: black;
-    font-size: calc(0.8em + 0.6vw);
-	font-family: 'Muli', sans-serif;
+	margin-bottom: 1rem;
 }
 
-#landingText .location{
-    font-size: calc(0.5em + 0.5vw);
-
+.Projects p{
+    margin-bottom: 1rem;	
 }
 
-#landingText .title{
-	color: black;
-	font-size: calc(1.8em + 0.6vw);
-	font-family: 'Muli', sans-serif;
+/* SHORTS */
+
+.shortsTitle {
+  padding: 3px 24px;
+  overflow: visible;
+  border-bottom: 6px solid var(--accent1);
+  height: 6rem;
 }
 
-.bold{
-	font-weight: 800;
+.shortsGrid {
+  padding: 6%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 0.4fr));
+  gap: 20px;
+  justify-content: center;
 }
 
-.bloglink{
-	padding: 0;
+.shortContainer {
+	height: auto;
+	padding: 15px;
+	color: var(--black);
 }
 
-a {
-    color: #0014ff;
+.shortInfo{
+	padding-top:10px;
+	font-style: italic;
 }
 
-body{
-	background-image: url("images/fishbg.png");
-	background-repeat: repeat;
-	background-size: 200px;
-	font-family: 'Muli', sans-serif;
-}
-.navbar{
-	font-size: 1.1em;
+.shortContainer .title{
+	text-align: center;
 }
 
+/* FOOTER*/
+.footer {
+  background: var(--accent1);
+  padding: 3px 24px;
+  overflow: visible;
+  display: grid;
+  grid-template-columns: 30% 1fr;
+  gap: 30px;
+  margin-top: auto;
+}
 
+.CopyrightDisclaimer {
+  max-width: 90%;
+  margin-left: auto;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  color: var(--black);
+  text-align: center;
+}
