@@ -17,6 +17,9 @@
 
 p {
   color: var(--black);
+  margin-top: 0;
+  margin-bottom: 2em;
+  font-size: 18;
 }
 
 @font-face {
@@ -43,7 +46,7 @@ body {
   margin: 0;
   font-family: Glacial, sans-serif;
   background: var(--accent2);
-  color: white;
+  color: var(--black);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -68,9 +71,10 @@ body {
 }
 
 .nav-item {
+  font-family: Glacial;
   position: relative;
   text-decoration: none;
-  font-size: 24px;
+  font-size: 25px;
   z-index: 1;
   color: var(--black);
 }
@@ -291,6 +295,7 @@ margin-top: -83px;
 .Projects {
 	padding: 8%;
 	padding-top: 3%;
+  padding-right: 18%;
 }
 
 .Projects section{
@@ -301,9 +306,13 @@ margin-top: -83px;
   display: grid;
   grid-template-columns: 25% 1fr;
   gap: 30px;
-  height: 100% 
 }
 
+.Projects .shortInfo{
+  font-style: italic;
+  text-align: right;
+  position: relative;
+}
 .ProjectList {
   padding: 3px 24px;
   overflow: visible;
@@ -316,13 +325,17 @@ margin-top: -83px;
 	color: var(--accent1);
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
+  font-family: 'Fredoka';
+  font-size: 22;
 }
 
 .title {
-	text-decoration: underline;
-	margin-bottom: 1em;
-	font-size: 30px;
-	color: var(--black);
+	margin-bottom: 0.2em;
+  color: var(--black);
+  font-family: 'Fredoka';
+  font-size: 25;
+  font-weight: 500;
+  text-transform: uppercase;
 }
 
 ul {
@@ -366,6 +379,12 @@ ul {
 
 .Projects p{
     margin-bottom: 1rem;	
+    text-indent: 30px;
+    text-align: justify;
+}
+
+.Projects iframe{
+  width: 100%;
 }
 
 /* SHORTS */
@@ -386,36 +405,59 @@ ul {
 }
 
 .shortContainer {
-	height: auto;
-	padding: 15px;
-	color: var(--black);
+	  padding: 15px;
+    color: var(--black);
+    height: 400px;
+    overflow: hidden;
+    position: relative;
 }
 
 .shortInfo{
-	padding-top:10px;
 	font-style: italic;
+  text-align: right;
+  position: absolute;
+  bottom: 0px;
+  right: 0;
 }
 
 .shortContainer .title{
-	text-align: center;
+	text-align: left;
+}
+
+.shortContainer video{
+	height: 65%;
+  position: absolute;
+}
+
+.shortContainer iframe{
+  border: 0px;
+  width: 100%;
+  aspect-ratio: 16 / 9;
 }
 
 /* FOOTER*/
 .footer {
   background: var(--accent1);
-  padding: 3px 24px;
+  padding: 15px;
   overflow: visible;
   display: grid;
   grid-template-columns: 30% 1fr;
   gap: 30px;
   margin-top: auto;
+  text-align: right;
+}
+
+.footer p{
+  color: var(--black);
+  margin-top: 0;
+  margin-bottom: 1em;
+  font-size: 14;
+  font-family: Arial;
 }
 
 .CopyrightDisclaimer {
-  max-width: 90%;
   margin-left: auto;
   font-size: 14px;
-  letter-spacing: 0.03em;
   color: var(--black);
   text-align: center;
 }

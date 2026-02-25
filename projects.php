@@ -31,19 +31,20 @@
 		
 		<section>
 		<div class="scroll-anchor" id="Dune"></div>
-		<div class="title">Dune Awakens Gameplay Trailer | 3D Animation | 2024</div>
+		<div class="title">Dune Awakakening Gameplay Trailer</div>
 		<p>
 		TrailerFarm/BigFarmer collaboration. A really cool project to work on which taught me a lot about AAA trailer pipelines. 
 		Responsible for some character animation and polish. Animation Lead: Aiden Young 
 		</p>
 		<iframe class="embed-responsive-item" width="680" height="360" src="https://www.youtube.com/embed/Ud3EW5aAUZ8?si=ZOrfC4uuqw88y6o8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<div class="shortInfo"> 3D Animation, 2024 </div>
 		</section>
 		
 		<!-- Project -->
 		
 		<section>
 		<div class="scroll-anchor" id="LegoBrawls"></div>
-		<div class="title">LEGO Brawls Cinematic Trailer | 3D Animation | 2022</div>
+		<div class="title">LEGO Brawls Cinematic Trailer</div>
 		<p>
 		Another project done in collaboration with TrailerFarm, this time for the LEGO game LEGO Brawls. It was a
 		delight to be able to work on my first LEGO project with an amazing team. I was given a lot
@@ -51,13 +52,15 @@
 
 		</p>
 		<iframe class="embed-responsive-item" width="680" height="360" src="https://www.youtube.com/embed/t31--iHG99w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<div class="shortInfo"> 3D Animation, 2022 </div>
+		
 		</section>
 		
 		<!-- Project -->
 		
 		<section>
 		<div class="scroll-anchor" id="Fallguys"></div>
-		<div class="title">Fall Guys Cinematic | 3D Animation & Assistance| 2020,2021</div>
+		<div class="title">Fall Guys Cinematic </div>
 		<p>
 		Near the end of 2020 I was contacted by The TrailerFarm to join the FallGuys cinematic trailer team. I started out helping
 		the background character team on the Season 3 trailer which was just wrapping up. Afterwards I continued as a full time animator
@@ -69,6 +72,8 @@
 			<iframe class="embed-responsive-item" width="340" height="180" src="https://www.youtube.com/embed/qNxqE52ZN-8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			<iframe class="embed-responsive-item" width="340" height="180" src="https://www.youtube.com/embed/SUK4is4QweM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		</div>
+
+		<div class="shortInfo"> 3D Animation and assistance, 2020,2021 </div>
 		
 		</section>
 		
@@ -77,12 +82,14 @@
 		
 		<section>
 		<div class="scroll-anchor" id="Loccitane"></div>
-		<div class="title">L'Occitane Christmas Advertisment | 2D Animation Cleanup & Fixes| 2021</div>
+		<div class="title">L'Occitane Christmas Advertisment </div>
 		<p>
 		On this project I worked with Sehsucht as a 2D animation cleanup and fix artist. I took over character animation TVP files
 		and did final line and proportion correction on them
 		</p>
 		<iframe class="embed-responsive-item" width="680" height="360" src="https://www.youtube.com/embed/lBYZyFHjwv0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<div class="shortInfo">  2D Animation Cleanup & Fixes 2021 </div>
+		
 		</section>
 		
 						
@@ -90,7 +97,7 @@
 		
 		<section>
 		<div class="scroll-anchor" id="Sfar"></div>
-		<div class="title">Joann Sfar's TV series | Production Design | 2020</div>
+		<div class="title">Joann Sfar's TV series</div>
 		<p>
 		Joséphine Meis and I were contacted by Joann Sfar to work on his upcoming TV shows. The task was to create final
 		frame illustrations that would accureately represent the shows for pitching. We were essentially responsible for
@@ -100,6 +107,7 @@
 		short animation that got us this job after Joann Sfar noticed it on Twitter.
 		</p>
 		<iframe class="embed-responsive-item" width="680" height="360" src="https://kpavicic.com/videos/aspirine_crop.mp4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<div class="shortInfo">  Production Design, 2020 </div>
 		</section>
 		
 
