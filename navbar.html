@@ -1,13 +1,29 @@
 
+<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<header class="header">
+
+<header class="header" id="headerNav">
   <nav>
   <a href="index.php" class="nav-logo"><span>Kažun</span><span>Home</span></a>
   </nav>
-  <nav class="nav">
+  <nav class="nav" id="TopNav">
     <a href="projects.php" class="nav-item">Projects</a>
     <a href="shorts.php" class="nav-item">Shorts</a>
     <a href="#" class="nav-item">About Me</a>
     <a href="#" class="nav-item">Let's Talk!</a>
+    <a href="javascript:void(0);" class="icon" onclick="humburgerFunc()">
+    <i class="fa fa-bars"></i></a>
   </nav>
 </header>
+
+<script>
+  function humburgerFunc() {
+  var x = document.getElementById("TopNav");
+  if (x.className === "nav") {
+    x.className += " responsive";
+  } else {
+    x.className = "nav";
+  }
+} 
+</script>
