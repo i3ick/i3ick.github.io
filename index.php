@@ -64,7 +64,7 @@
   <section class="reel">
 	<h3>SHOWREEL</h3>
     <div class="video">
-      <iframe src="https://drive.google.com/file/d/1j5SNaYSCu-6a1a-HIYcyiq3KvMMSoba5/preview" style="border: 0;height: 35vw;" width="100%"  allow="autoplay; fullscreen"></iframe>
+      <iframe src="https://drive.google.com/file/d/1j5SNaYSCu-6a1a-HIYcyiq3KvMMSoba5/preview" width="100%"  allow="autoplay; fullscreen"></iframe>
 	
 	</div>
   </section>
