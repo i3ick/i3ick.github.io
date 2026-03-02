@@ -92,7 +92,6 @@ body {
   .nav {display: block}
   .nav a {display: none;}
   .nav a.icon {
-    float: right;
     display: block;
     font-family: Glacial;
     text-decoration: none;
@@ -100,17 +99,20 @@ body {
     z-index: 1;
     color: var(--black);
   }
+
+  .header {
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  }
 }
 
 @media screen and (max-width: 600px) {
   .nav.responsive {
     gap: 6%;
     align-items: flex-start;
-    padding-left: 83px;
     flex-direction: column;
     align-content: center;
     transition: transform 0.2s ease;
-    
+    padding-left: 0;
   }
   .nav.responsive a.icon {
     position: absolute;
@@ -123,6 +125,7 @@ body {
     text-decoration: none;
     z-index: 1;
     color: var(--black);
+    padding-left: 0;
     transition: transform 0.2s ease;
   }
 }
@@ -168,24 +171,26 @@ body {
 
 
 
-.nav-item::before {
-  content: "";
-  position: absolute;
-  left: 38%;
-  top: -167%;
-  width: 110px;
-  height: 107px;
-  background: var(--accent2);
-  border-radius: 50%;
-  transform: translateX(-50%) scale(0.7);
-  transform-origin: center;
-  z-index: -1;
-  border: 5px solid var(--accent1);
-  margin-left: 1vw;
-  opacity: 0;
-  transition: 150ms cubic-bezier(.6,-0.28,.74,.05);
+@media screen and (min-width: 600px) {
+  
+  .nav-item::before {
+    content: "";
+    position: absolute;
+    left: 38%;
+    top: -167%;
+    width: 110px;
+    height: 107px;
+    background: var(--accent2);
+    border-radius: 50%;
+    transform: translateX(-50%) scale(0.7);
+    transform-origin: center;
+    z-index: -1;
+    border: 5px solid var(--accent1);
+    margin-left: 1vw;
+    opacity: 0;
+    transition: 150ms cubic-bezier(.6,-0.28,.74,.05);
+  }
 }
-
 .nav-item:hover::before,
 .nav-item.active::before {
   transform: translateX(-50%) scale(1);
