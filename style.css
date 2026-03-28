@@ -1,10 +1,29 @@
+/* Default Theme 
 :root {
   --blue: #6f8fae;
   --dark: #111;
+  --text: #111;
+  --title: #111;
+  --background: #dfd4c1;
   --accent1: #5a8cb1;
-  --accent2: #d7c2a3;
+  --accent2: #dfd4c1; /*#d7c2a3 
   --black: #2e2d2e;
-}
+} */
+
+
+
+/* Dark Theme  */
+
+:root {
+  --header: #2e506b;
+  --background: #29394a;
+  --blue: #6f8fae;
+  --text: #bab6ac;
+  --title: #deddc4;
+  --accent1: #2e506b;
+  --accent2: #deddc4; /*#d7c2a3 */
+  --black: #bab6ac;
+} 
 
 * {
   box-sizing: border-box;
@@ -15,6 +34,23 @@
   src: url(/fonts/glacial-indifference.regular.otf); /* url of the font */
 }
 
+@font-face {
+  font-family: Glacial;
+  src: url(/fonts/glacial-indifference.bold.otf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Fredoka;
+  src: url(/fonts/Fredoka-VariableFont_wdth,wght.ttf);
+}
+
+@font-face {
+  font-family: Josefin;
+  src: url(/fonts/JosefinSans-Regular.ttf);
+}
+
+
 p {
   color: var(--black);
   margin-top: 0;
@@ -22,21 +58,11 @@ p {
   font-size: 18;
 }
 
-@font-face {
-  font-family: Glacial;
-  src: url(/fonts/glacial-indifference.bold.otf);
-  font-weight: bold;
-}
 
 * {
    font-family: Glacial, sans-serif;
 }
 
-
-@font-face {
-  font-family: Fredoka;
-  src: url(/fonts/Fredoka-VariableFont_wdth,wght.ttf);
-}
 
 html {
 	scroll-behavior: smooth;
@@ -45,7 +71,7 @@ html {
 body {
   margin: 0;
   font-family: Glacial, sans-serif;
-  background: var(--accent2);
+  background: var(--background);
   color: var(--black);
   display: flex;
   flex-direction: column;
@@ -60,7 +86,6 @@ body {
   overflow: visible;
   display: grid;
   grid-template-columns: 10vw 1fr;
-  gap: 30px;
 }
 
 .nav {
@@ -71,12 +96,12 @@ body {
 }
 
 .nav-item {
-  font-family: Glacial;
+  font-family: Josefin;
   position: relative;
   text-decoration: none;
   font-size: 25px;
   z-index: 1;
-  color: var(--black);
+  color: var(--accent2);
 }
 
 .nav .icon {
@@ -220,7 +245,8 @@ body {
   width: 100%;
   z-index: 0;
   position: relative;
-  
+  transform: skewX(5deg);
+  translate: -20px 0px;
 }
 
 .logo {
@@ -239,9 +265,10 @@ body {
 
 .logo p {
   margin: 6px 0 0;
-  font-size: 2vw;
+  font-size: 1.2vw;
   letter-spacing: 2px;
   text-align: center;
+  font-family: Josefin;
 }
 
 /* CONTENT */
@@ -259,7 +286,6 @@ body {
   margin-top: -95px;
   width: inherit;
   position: relative;
-  overflow: hidden;
 }
 
 .profile h2 {
@@ -280,7 +306,8 @@ margin-top: -83px;
   border-radius: 134px;
 }
 
-.reel .video iframe{
+.reel video {
+  padding: 4%;
   border: 0;
   width: 100%;
   aspect-ratio: 16 / 9;
@@ -296,7 +323,7 @@ margin-top: -83px;
   text-align: center;
   margin-top: 16px;
   letter-spacing: 45px;
-  color: var(--accent1);
+  color: var(--title);
   font-weight: bold;
   font-size: 17.9px;
 }
@@ -313,17 +340,16 @@ margin-top: -83px;
 .Projects {
 	padding: 8%;
 	padding-top: 3%;
-  padding-right: 18%;
+  padding-right: 15%;
+  padding-left: 15%;
 }
 
-.Projects section{
-	margin-bottom: 3em;
-}
+
 
 .ProjectContent {
   display: grid;
-  grid-template-columns: 25% 1fr;
-  gap: 30px;
+  grid-template-columns: 18% 1fr;
+  gap: 23px;
 }
 
 .Projects .shortInfo{
@@ -338,19 +364,22 @@ margin-top: -83px;
 }
   
 .ProjectList h1, .shortsTitle h1{
-	margin-bottom: 2rem;
-	text-align: center;
-	color: var(--accent1);
+	text-align: right;
+	color: var(--title);
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
-  font-family: 'Fredoka';
-  font-size: 22;
+  font-family: 'Josefin';
+  font-size: 25;
+}
+
+.shortsTitle h1{
+	text-align: center;
 }
 
 .title {
 	margin-bottom: 0.2em;
-  color: var(--black);
-  font-family: 'Fredoka';
+  color: var(--title);
+  font-family: 'Josefin';
   font-size: 25;
   font-weight: 500;
   text-transform: uppercase;
@@ -367,7 +396,7 @@ ul {
   text-align: end;
   text-decoration: none;
   transition: 100ms;
-  padding-top:15px;
+  padding-top:10px;
 }
 
 .ProjectList li a:hover {
@@ -376,34 +405,109 @@ ul {
 }
 
 
-  
 .project-nav-item {
   position: relative;
   text-decoration: none;
-  font-size: 24px;
+  font-size: 19px;
   z-index: 1;
-  color: var(--black);	
+  color: var(--text);	
 }
 
-.Projects{
-
+.Projects section, .shortsGrid section {
+  margin-left:5%;
+  margin-right:5%;
+  height: auto;
+	padding: 15px;
+	color: var(--black);
+  display: block;
+  position: relative;
+  margin-bottom: 4em;
 }
 
-.Projects title{
-	font-size: 27px;
-	color: black;
-	margin-bottom: 1rem;
+.sticker{
+  display:block;
+  position:absolute;
+  right:0;
+  top:0;
 }
 
-.Projects p{
-    margin-bottom: 1rem;	
-    text-indent: 30px;
-    text-align: justify;
+.Projects iframe, .shortsGrid iframe {
+  width:100%;
+  aspect-ratio: 16/9;
+  border: 6px solid var(--accent1);
 }
 
-.Projects iframe{
-  width: 100%;
+.Projects .backsplash, .shortsGrid .backsplash {
+  background-color: var(--accent1);
+  transform: skewX(16deg);
+  width: 89%;
+  height: 97%;
+  display: inherit;
+  position: absolute;
+  z-index: -3;
 }
+
+.Projects title, .shortsGrid title{
+  text-align: left;
+  font-family: Josefin;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.Projects .undertitle, .shortsGrid .undertitle{
+  text-align: right !important;
+  font-size: 17px !important;
+  color: var(--accent2) !important;
+  font-family: Josefin;
+  font-weight: 400 !important;
+  margin-top: 2%;
+}
+
+.Projects p, .shortsGrid p{
+  text-align: left;
+  font-size: 15px;
+  margin-bottom: 0rem;
+}
+
+.description {
+  padding-bottom: 2%;
+  margin-bottom: 2%;
+  position: relative;
+  width: 90%;
+  translate: 20px 0px;
+}
+
+.textBackground{
+  background-color: var(--background);
+  transform: skewX(-6deg);
+  width: 110%;
+  height: 100%;
+  display: inherit;
+  position: absolute;
+  z-index: -3;
+  translate: -5%;
+}
+
+.decoLines{
+  transform: skewX(-6deg);
+  width: 110%;
+  height: 100%;
+  display: inherit;
+  position: absolute;
+  z-index: -3;
+  translate: -5%;
+  border-left: 20px double var(--accent1);
+}
+
+.projectContentContainer {
+  padding: 6%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(800px, 0.4fr));
+  gap: 20px;
+  justify-content: center;
+}
+
 
 /* SHORTS */
 
@@ -442,9 +546,9 @@ ul {
 	text-align: left;
 }
 
-.shortContainer video{
-	height: 65%;
-  position: absolute;
+.shortsContent video{
+	width: 100%;
+  border: 6px solid var(--accent1);
 }
 
 .shortContainer iframe{

@@ -63,10 +63,10 @@
 
   <section class="reel">
 	<h3>SHOWREEL</h3>
-    <div class="video">
-      <iframe src="https://drive.google.com/file/d/1j5SNaYSCu-6a1a-HIYcyiq3KvMMSoba5/preview" width="100%"  allow="autoplay; fullscreen"></iframe>
-	
-	</div>
+
+	<video poster="videos/thumb2.PNG" controls>
+  		<source src="videos/karlo_PAVICIC_RAVLIC_Cinematic_2025_spring.mp4" type="video/mp4">
+	</video>
   </section>
 </main>
 
