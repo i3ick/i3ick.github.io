@@ -17,12 +17,19 @@
     <source src="videos/BGVID_04_01_26.mp4" width="100%" type="video/mp4">
   </video>
   <div class="logo">
-    <h1>Kažun</h1>
-    	<p>3D Animation, Mocap cleanup,</p>
-	<p>Vizdev & Education!</p>
+    <h1> Karlo Pavičić-Ravlić</h1>
+    	<p class="logoSubtitles">Animation, Mocap cleanup,</p>
+	<p class="logoSubtitles">and Education services!</p>
 
   </div>
 </section>
+
+<section class="reel">
+	<h3>Showreel</h3>
+
+  		<iframe poster="videos/thumb2.PNG"   src="https://drive.google.com/file/d/1j5SNaYSCu-6a1a-HIYcyiq3KvMMSoba5/preview?vq=hd1080" type="video/mp4"> </iframe>
+
+  </section>
 
 <main class="content">
   <aside class="profile">
@@ -62,7 +69,7 @@
   </aside>
 
   <section class="reel">
-	<h3>SHOWREEL</h3>
+	<h3>Showreel</h3>
 
 	<video poster="videos/thumb2.PNG" controls>
   		<source src="videos/karlo_PAVICIC_RAVLIC_Cinematic_2025_spring.mp4" type="video/mp4">

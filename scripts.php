@@ -9,6 +9,85 @@
 
 <?php include "navbar.html"; ?>
 
+<main class="ProjectContent">
+	<aside class="ProjectList">
+	<div style="position: sticky; top: 20;">
+	<h1>Tools</h1>
+	<ul>
+		<li><a class="project-nav-item" onclick="document.getElementById('KPSync').scrollIntoView();"   >Keyframe Pro Sync</a></li>
+		<li><a class="project-nav-item" onclick="document.getElementById('Quadblaster').scrollIntoView();" >Quadblaster</a></li>
+	</ul>
+  <h2>Open Source:</h2>
+  <ul>
+    <li><a class="project-nav-item" onclick="document.getElementById('CleanCycleBake').scrollIntoView();">Clean Cycle Bake</a></li>
+  </ul>
+	</div>
+	</aside>
+
+	<content class="Projects">
+
+			
+		<!-- Short -->
+    <div class ="scroll-anchor" id="KPSync"></div>
+		 <section>
+			<!--<div class ="sticker"> </div> -->
+			<div class ="backsplash"> </div>
+			<div class ="description"> 
+				<div class ="textBackground"> </div>
+				<!-- <div class ="decoLines"> </div> -->
+				<div class ="title">Keyframe Pro Sync</div>
+				<p>
+          Keyframe Pro Sync is a professional studio tool for animators working with reference footage. 
+          It creates a seamless work environment which doesn't require the user to switch between software 
+           execute actions such as adjusting the current frame, importing bookmarks, starting playback, or scrubbing.
+				</p>
+			</div>
+			<img  src ="images/kfpro_thumb.png" ></img>
+			<p class="undertitle"> <a href="https://superhivemarket.com/products/quadblaster"> Visit store page!</a> </p>
+		</section>
+
+
+     <div class ="scroll-anchor" id="Quadblaster"></div>
+    <section>
+			<!--<div class ="sticker"> </div> -->
+			<div class ="backsplash"> </div>
+			<div class ="description"> 
+				<div class ="textBackground"> </div>
+				<!-- <div class ="decoLines"> </div> -->
+				<div class ="title">Quadblaster </div>
+				<p>
+					Quadblaster is a tool I've written to make playblasting with multiple views, notes, and 
+          compressing the file a breeze. It contains essential production burnt in metadata such as the animatos name, shot phase,
+          date, notes, frame count, DCC frame count, and more
+				</p>
+			</div>
+      <img  src ="images/Quadblaster_thumb.png" ></img>
+			<p class="undertitle"><a href="https://superhivemarket.com/products/quadblaster"> Visit store page!</a>  </p>
+		</section>
+
+
+     <div class ="scroll-anchor" id="CleanCycleBake"></div>
+     <section>
+			<!--<div class ="sticker"> </div> -->
+			<div class ="backsplash"> </div>
+			<div class ="description"> 
+				<div class ="textBackground"> </div>
+				<!-- <div class ="decoLines"> </div> -->
+				<div class ="title">Clean Cycle Bake</div>
+				<p>
+					Clean Cycle Bake is a tool which bakes down f-curves with modifiers or offset animation into a specified range all while
+          preserving f-curve point handles. Essential for baking game animation loops.
+				</p>
+			</div>
+			<img  src ="images/CCB_thumb.png" ></img>
+			<p class="undertitle"> <a href=""> Download from Github!</a> </p>
+		</section>
+
+
+
+</content>
+</main>
+
 
 <?php include "footer.html"; ?>
 </body>

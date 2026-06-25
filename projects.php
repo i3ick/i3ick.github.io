@@ -37,8 +37,8 @@
 				<!-- <div class ="decoLines"> </div> -->
 				<div class ="title">Dune: Awakening Gameplay Trailer</div>
 				<p>
-					TrailerFarm/BigFarmer collaboration. A really cool project to work on which taught me a lot about AAA trailer pipelines. 
-					Responsible for some character animation and polish. Animation Lead: Aiden Young 
+					TrailerFarm/BigFarmer collaboration. A cool project to work on which taught me a lot about AAA trailer pipelines. 
+					Responsible for hand keyed character animation. Animation Lead: Aiden Young 
 
 				</p>
 			</div>
@@ -54,9 +54,8 @@
 				<div class ="textBackground"> </div>
 				<div class="title">LEGO Brawls Cinematic Trailer</div>
 				<p>
-				Another project done in collaboration with TrailerFarm, this time for the LEGO game LEGO Brawls. It was a
-				delight to be able to work on my first LEGO project with an amazing team. I was given a lot
-				of freedom in adding my personal touch with some goofy gags. Responsible for all 3D animation starting from 0:39
+				TrailerFarm collaboration on LEGO® Brawls. The project was a delight to work on with a lot of freedom for us to 
+				insert fun gags in line with the classic LEGO Humor. Responsible for all 3D animation starting from 0:39
 
 				</p>
 			</div>
@@ -74,9 +73,9 @@
 				<div class ="textBackground"> </div>
 				<div class="title">Fall Guys Cinematic </div>
 				<p>
-				Near the end of 2020 I was contacted by The TrailerFarm to join the FallGuys cinematic trailer team. I started out helping
-				the background character team on the Season 3 trailer which was just wrapping up. Afterwards I continued as a full time animator
-				on the DOOM trailer, Season 4 trailer, and Season 5 trailer.
+				Near the end of 2020 I was contacted by The TrailerFarm to join the FallGuys cinematic trailer team. 
+				Season 3 trailer as crowd animator: using premade libraries and layerig animation on top to bring unique personalities to the characters.
+				Afterwards I continued as character animator on consecutive season trailers for the DOOM collaboration, season 4, and season 5.
 				</p>
 				</div>
 			<div class="text-center">
@@ -99,8 +98,7 @@
 				<div class ="textBackground"> </div>
 				<div class="title">L'Occitane Christmas Advertisment </div>
 				<p>
-				On this project I worked with Sehsucht as a 2D animation cleanup and fix artist. I took over character animation TVP files
-				and did final line and proportion correction on them
+				Sehsucht 2D animation cleanup and fix project. I took over character animation TVP files and did final line and proportion correction on them.
 				</p>
 			</div>
 			<iframe class="embed-responsive-item"  src="https://www.youtube.com/embed/lBYZyFHjwv0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -118,8 +116,8 @@
 				<div class="title">Joann Sfar's TV series</div>
 				<p>
 				Joséphine Meis and I were contacted by Joann Sfar to work on his upcoming TV shows. The task was to create final
-				frame illustrations that would accureately represent the shows for pitching. We were essentially responsible for
-				the production design of the two shows: figuring out how to draw the backgrounds, props, effects, and what color
+				frame illustrations that would accureately represent the shows for pitching. We were responsible for the production 
+				design of the two shows: figuring out how to draw the backgrounds, props, effects, and what color
 				pallets should be used. Getting to work with Joann's characters and worlds was a very fun experience and I can't
 				wait to be able to share the work we've done. Currently all the content is under NDA, so bellow you will find the
 				short animation that got us this job after Joann Sfar noticed it on Twitter.

@@ -19,10 +19,16 @@
   --background: #29394a;
   --blue: #6f8fae;
   --text: #bab6ac;
-  --title: #deddc4;
+  --title: #c3c0bd;
   --accent1: #2e506b;
-  --accent2: #deddc4; /*#d7c2a3 */
+  --accent2: #c3c0bd; /*#d7c2a3 */
   --black: #bab6ac;
+  --footer: #152531;
+  --footerText: #697075;
+  --orange: #de743a;
+  --yellow: #deb63a;
+  --cyan: #3ade91;
+  --cyanHover: #71c39c;
 } 
 
 * {
@@ -95,6 +101,10 @@ body {
   padding-left: 83px;
 }
 
+.navbarLogo{
+  color: var(--cyan) !important;
+}
+
 .nav-item {
   font-family: Josefin;
   position: relative;
@@ -124,9 +134,18 @@ body {
     z-index: 1;
     color: var(--black);
   }
+  .nav.responsive{
+    padding-left: revert-rule;
+  }
+
+  .nav-item{
+    padding: 4px;
+    font-size: 20px;
+  }
 
   .header {
     grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    padding: 3px 12px;
   }
 }
 
@@ -137,7 +156,7 @@ body {
     flex-direction: column;
     align-content: center;
     transition: transform 0.2s ease;
-    padding-left: 0;
+
   }
   .nav.responsive a.icon {
     position: absolute;
@@ -205,7 +224,6 @@ body {
     top: -167%;
     width: 110px;
     height: 107px;
-    background: var(--accent2);
     border-radius: 50%;
     transform: translateX(-50%) scale(0.7);
     transform-origin: center;
@@ -214,6 +232,7 @@ body {
     margin-left: 1vw;
     opacity: 0;
     transition: 150ms cubic-bezier(.6,-0.28,.74,.05);
+    background: var(--cyanHover);
   }
 }
 .nav-item:hover::before,
@@ -233,12 +252,11 @@ body {
 
 /* BANNER */
 .banner {
-  height: 230px;
   background: var(--accent1);
   overflow: hidden;
   display: grid;
-  grid-template-columns: 70vw 1fr;
-  gap: 10px;
+  grid-template-columns: 50vw 1fr;
+  gap: 44px;
 }
 
 .banner .video {
@@ -247,29 +265,39 @@ body {
   position: relative;
   transform: skewX(5deg);
   translate: -20px 0px;
+  filter: grayscale(60%);
 }
 
 .logo {
   position: relative;
-  color: var(--accent2);
+  color: var(--cyan);
   font-weight: bold;
   padding-right: 4vw;
 }
 
 .logo h1 {
-  margin: 0;
-  font-size: 5vw;
-  font-family: Fredoka;
+  font-size: 3vw;
+  font-family: Josefin;
   text-align: center;
+  margin-bottom: 0;
 }
 
 .logo p {
   margin: 6px 0 0;
-  font-size: 1.2vw;
+  font-size: 1.1vw;
   letter-spacing: 2px;
   text-align: center;
   font-family: Josefin;
 }
+
+@media screen and (max-width: 600px) {
+  .banner{display:block}
+  .banner .video{translate: unset; transform: unset;}
+  .logo {padding-right: 0; padding-bottom: 16px;}
+  .logo h1{font-size: 6vw;}
+  .logo p{margin: 2px 0 0;font-size: 3vw;letter-spacing: 2px;}
+}
+
 
 /* CONTENT */
 .content {
@@ -306,14 +334,15 @@ margin-top: -83px;
   border-radius: 134px;
 }
 
-.reel video {
-  padding: 4%;
+.reel video, .reel iframe {
   border: 0;
   width: 100%;
   aspect-ratio: 16 / 9;
 }
 
 .reel{
+  padding: 4%;
+  padding-top: 0;
   width: inherit;
   position: relative;
   overflow: hidden;
@@ -321,11 +350,11 @@ margin-top: -83px;
 
 .reel h3 {
   text-align: center;
-  margin-top: 16px;
-  letter-spacing: 45px;
-  color: var(--title);
-  font-weight: bold;
-  font-size: 17.9px;
+  margin-top: 47px;
+  letter-spacing: 6px;
+  font-size: 35px;
+  margin-bottom: 1%;
+  font-family: Josefin;
 }
 
 
@@ -340,16 +369,23 @@ margin-top: -83px;
 .Projects {
 	padding: 8%;
 	padding-top: 3%;
-  padding-right: 15%;
-  padding-left: 15%;
+  padding-right: 10%;
+  padding-left: 10%;
 }
 
-
+.Projects a{
+  margin-bottom: 0.2em;
+  color: #e6e1d4;
+  font-family: 'Josefin';
+  font-size: 25;
+  font-weight: 500;
+}
 
 .ProjectContent {
   display: grid;
-  grid-template-columns: 18% 1fr;
+  grid-template-columns: 20% 1fr;
   gap: 23px;
+  overflow: hidden;
 }
 
 .Projects .shortInfo{
@@ -358,18 +394,27 @@ margin-top: -83px;
   position: relative;
 }
 .ProjectList {
-  padding: 3px 24px;
+  padding: 3% 8%;
   overflow: visible;
   border-right: 6px solid var(--accent1);
 }
   
 .ProjectList h1, .shortsTitle h1{
-	text-align: right;
+	text-align: center;
 	color: var(--title);
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
   font-family: 'Josefin';
   font-size: 25;
+}
+
+.ProjectList h2, .shortsTitle h2{
+	font-family: Glacial, sans-serif;
+  text-align: center;
+  padding: 0;
+  color: var(--cyan);
+  margin-bottom: 0;
+  margin-top: 20%;
 }
 
 .shortsTitle h1{
@@ -395,13 +440,16 @@ ul {
   display: block;
   text-align: end;
   text-decoration: none;
-  transition: 100ms;
+  transition: 150ms;
   padding-top:10px;
+  cursor: pointer;
 }
 
 .ProjectList li a:hover {
-  padding-right:20px;
-  transition: 100ms;
+  padding-right:5%;
+  transition: 150ms;
+  color: var(--cyanHover);
+  font-weight: bold;
 }
 
 
@@ -465,7 +513,7 @@ ul {
 }
 
 .Projects p, .shortsGrid p{
-  text-align: left;
+  text-align: justify;
   font-size: 15px;
   margin-bottom: 0rem;
 }
@@ -508,6 +556,22 @@ ul {
   justify-content: center;
 }
 
+@media screen and (max-width: 600px) {
+  .ProjectList {display: none;}
+  .ProjectContent {
+    display: grid;
+    grid-template-columns: 100% 1fr !important; 
+  }
+  .Projects section{
+    margin-left: 0;
+    margin-right: 0;
+    padding: 4px;
+  }
+  .Projects .description{width:100%;}
+  .Projects .backsplash{width:100%; height:100%; transform: skewX(8deg);}
+}
+
+
 
 /* SHORTS */
 
@@ -515,15 +579,16 @@ ul {
   padding: 3px 24px;
   overflow: visible;
   border-bottom: 6px solid var(--accent1);
-  height: 6rem;
 }
 
 .shortsGrid {
   padding: 6%;
+  padding-top: 3%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 0.4fr));
   gap: 20px;
   justify-content: center;
+  overflow: hidden;
 }
 
 .shortContainer {
@@ -551,6 +616,11 @@ ul {
   border: 6px solid var(--accent1);
 }
 
+.Projects img{
+	width: 100%;
+  border: 6px solid var(--accent1);
+}
+
 .shortContainer iframe{
   border: 0px;
   width: 100%;
@@ -559,22 +629,24 @@ ul {
 
 /* FOOTER*/
 .footer {
-  background: var(--accent1);
+  background: var(--footer);
   padding: 15px;
   overflow: visible;
   display: grid;
   grid-template-columns: 30% 1fr;
   gap: 30px;
   margin-top: auto;
-  text-align: right;
 }
 
 .footer p{
-  color: var(--black);
+  color: var(--footerText);
   margin-top: 0;
   margin-bottom: 1em;
   font-size: 14;
-  font-family: Arial;
+}
+
+.FooterInfo p{
+  font-size: 18px;
 }
 
 .CopyrightDisclaimer {

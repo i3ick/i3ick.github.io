@@ -12,7 +12,7 @@
 <main class="shortsContent">
 
 	<div class="shortsTitle">
-	<h1>Shorts</h1> </div>
+	<div><h1>Shorts</h1></div> </div>
 	<div class="shortsGrid">
 
 			
