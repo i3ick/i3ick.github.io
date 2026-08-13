@@ -8,7 +8,7 @@
 <body>
 
 <?php include "navbar.html"; ?>
-
+<div id="BlurPage" onclick="closeAllPopups()"></div>
 <main class="shortsContent">
 
 	<div class="shortsTitle">
@@ -28,11 +28,36 @@
 					Short Animation based on Joann Sfar's comic.
 				</p>
 			</div>
-				<video controls autoplay muted>
+				<video  autoplay muted playsinline>
   				<source src="https://kpavicic.com/videos/aspirine_crop.mp4" type="video/mp4">
 videos/karlo_PAVICIC_RAVLIC_Cinematic_2025_spring.mp4
 				</video>
 			<p class="undertitle"> 2D Animation, 3", 2019 </p>
+			<div class="popup">
+				<button onclick="openPopUp('infoPopup1')">Production info</button>
+				<span class="popuptext" id="infoPopup1">
+					<h2 class="title">Aspirine</h2>
+					<table class="ProductionTable">
+						<tr>
+							<td>Production Year: </td>
+							<td>2019 </td>
+						</tr>
+						<tr>
+							<td>Author/s:  </td>
+							<td>Joséphine MEIS </td>
+							<td>Karlo PAVIČIĆ RAVLIĆ </td>
+						</tr>
+						<tr>
+							<td>Medium: </td>
+							<td>2D </td>
+						</tr>
+						<tr>
+							<td>Country: </td>
+							<td>France</td>
+						</tr>
+					</table>
+				<button class="CloseButton" onclick="closePopUp('infoPopup1')">Close</button></span>
+			</div>
 		</section>
 
 		<!-- Short -->
@@ -65,6 +90,54 @@ videos/karlo_PAVICIC_RAVLIC_Cinematic_2025_spring.mp4
 			</div>
 				<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/TUYq6dh1nI0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			<p class="undertitle"> 2D Animation, 3", 2019 </p>
+				<div class="popup">
+				<button onclick="openPopUp('infoPopupDogs')">Production info</button>
+				<span class="popuptext" id="infoPopupDogs">
+					<h2 class="title">Dogs</h2>
+					<table class="ProductionTable">
+						<tr>
+							<td>Production Year: </td>
+							<td>2019 </td>
+						</tr>
+						<tr>
+							<td>Author/s:  </td>
+							<td>Karlo PAVIČIĆ RAVLIĆ </td>
+							<td>Benjamin BERREBI</td>
+							<td>Jakub BEDNARZ</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>Diego CRISTÓFANO</td>
+							<td>Théo LENOBLE</td>
+							<td>Mohammad BABAKOOHI</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>Marthinus VAN ROOYEN</td>
+						</tr>
+						<tr>
+							<td>Medium: </td>
+							<td>2D </td>
+						</tr>
+						<tr>
+							<td>Country: </td>
+							<td>France</td>
+						</tr>
+						<tr>
+							<td>Distributor: </td>
+							<td>Miyu</td>
+						</tr>
+						<tr>
+							<td>Awards: </td>
+							<td> Awards | Film of the year (2D animation) </td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>Rookie Awards | Film of the year (people's choice) </td>
+						</tr>
+					</table>
+				<button class="CloseButton" onclick="closePopUp('infoPopupDogs')">Close</button></span>
+			</div>
 		</section>
 
 
@@ -75,6 +148,39 @@ videos/karlo_PAVICIC_RAVLIC_Cinematic_2025_spring.mp4
 </main>
 
 <?php include "footer.html"; ?>
+
+
+<script>
+// Open popup
+function openPopUp(id) {
+  var popup = document.getElementById(id);
+  var body = document.body;
+  var blur = document.getElementById("BlurPage");
+  popup.classList.add("show");
+  blur.classList.add("show");
+  body.classList.add("stopScroll")
+}
+
+// Close popup
+function closePopUp(id) {
+  var popup = document.getElementById(id);
+  var body = document.body;
+  var blur = document.getElementById("BlurPage");
+  popup.classList.remove("show");
+  blur.classList.remove("show");
+  body.classList.remove("stopScroll")
+}
+
+
+
+function closeAllPopups() {
+    document.querySelectorAll(".popuptext").forEach(function(popup) {
+        closePopUp(popup.id);
+    });
+}
+
+
+</script>
 
 </body>
 </html>

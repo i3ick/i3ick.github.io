@@ -60,7 +60,6 @@
 p {
   color: var(--black);
   margin-top: 0;
-  margin-bottom: 2em;
   font-size: 18;
 }
 
@@ -84,16 +83,23 @@ body {
   min-height: 100vh;
 }
 
+body.stopScroll{
+  overflow: hidden;
+}
+
 
 /* HEADER / NAV */
-.header {
-  background: var(--accent1);
+.Header {
+  background: var(--footer);
   padding: 3px 24px;
   overflow: visible;
   display: grid;
   grid-template-columns: 10vw 1fr;
 }
 
+iframe{
+  border: 0;
+}
 .nav {
   display: flex;
   gap: 6%;
@@ -221,24 +227,22 @@ body {
     content: "";
     position: absolute;
     left: 38%;
-    top: -167%;
+    top: -226%;
     width: 110px;
     height: 107px;
-    border-radius: 50%;
-    transform: translateX(-50%) scale(0.7);
+    transform: translateX(-55%) translateY(-20%) scale(0.7);
     transform-origin: center;
     z-index: -1;
-    border: 5px solid var(--accent1);
     margin-left: 1vw;
     opacity: 0;
-    transition: 150ms cubic-bezier(.6,-0.28,.74,.05);
+    transition: 200ms cubic-bezier(.6,-0.28,.74,.05);
     background: var(--cyanHover);
   }
 }
 .nav-item:hover::before,
 .nav-item.active::before {
-  transform: translateX(-50%) scale(1);
-  transition: 400ms cubic-bezier(.18,.89,.32,1.28);
+  transform: translateX(-55%) scale(1) skewX(16deg);
+  transition: 350ms cubic-bezier(.18,.89,.32,1.28);
   opacity: 1;
 }
 
@@ -252,42 +256,60 @@ body {
 
 /* BANNER */
 .banner {
-  background: var(--accent1);
+  background: var(--footer);
   overflow: hidden;
   display: grid;
-  grid-template-columns: 50vw 1fr;
-  gap: 44px;
+  grid-template-columns: 40vw 1fr;
+  height: 145px;
 }
 
 .banner .video {
-  width: 100%;
   z-index: 0;
   position: relative;
   transform: skewX(5deg);
-  translate: -20px 0px;
+  translate: 2% 0px;
   filter: grayscale(60%);
+  height: 80%;
+  object-fit: cover;
+  width: 100%;
+  object-position: 0% 50%;
+}
+
+.MobileVideo{
+  display: none;
+  z-index: 0;
+  position: relative;
+  filter: grayscale(60%);
+  height: 20vh;
+  object-fit: cover;
+  width: 100%;
+  object-position: 0% 40%;
 }
 
 .logo {
+  margin-right: 12vw;
   position: relative;
   color: var(--cyan);
   font-weight: bold;
-  padding-right: 4vw;
+  padding-left: 4vw;
+  margin-top: 20px;
 }
 
 .logo h1 {
   font-size: 3vw;
-  font-family: Josefin;
+  font-family: Fredoka;
   text-align: center;
   margin-bottom: 0;
+  margin-top: 0;
 }
 
 .logo p {
   margin: 6px 0 0;
-  font-size: 1.1vw;
+  font-size: 1.5vw;
   letter-spacing: 2px;
-  text-align: center;
+  text-align: left;
   font-family: Josefin;
+  line-height: 20px;
 }
 
 @media screen and (max-width: 600px) {
@@ -295,43 +317,81 @@ body {
   .banner .video{translate: unset; transform: unset;}
   .logo {padding-right: 0; padding-bottom: 16px;}
   .logo h1{font-size: 6vw;}
-  .logo p{margin: 2px 0 0;font-size: 3vw;letter-spacing: 2px;}
+  .logo p{margin: 2px 0 0;font-size: 4vw;letter-spacing: 2px;}
+  .MobileVideo{display: block;}
+  .banner .video {display: none;}
+  .banner {height: 58px;}
+  .content {grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));}
 }
 
 
 /* CONTENT */
 .content {
   display: grid;
-  grid-template-columns: 300px 1fr;
-  gap: 25px;
-  padding: 30px;
+  grid-template-columns: 30vw 1fr;
+  padding-top: 0px;
+  gap: 16px;
+  margin-top: 2%;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-bottom: 5%;
 }
+
 
 
 .profile{
   z-index: 1;
-  margin-left: 3vw;
-  margin-top: -95px;
   width: inherit;
   position: relative;
+  border-radius: 5px;
+  display: block;
+}
+
+.profileContent{
+  background-color: #152531;
+  height: 100%;
 }
 
 .profile h2 {
-margin-top: -83px;
-  color: var(--accent1);
   letter-spacing: 2px;
-  font-size: 25.9px;
-  text-align: center;
+  font-size: 40.9px;
+  text-align: left;
   line-height: 1.17;
+  color: #71c39c;
+  margin-bottom: 0px;
+  font-family: Josefin;
+  margin-top: 0px;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+.lastname  {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-family: Josefin;
+  letter-spacing: 2px;
+  text-align: left;
+  line-height: 1.17;
+  color: #71c39c;
+  margin-top: 0px;
+  padding-left: 20px;
+}
+
+.profile p{
+  margin-bottom: 10;
+  text-align: left;
+  font-size: 1em;
+  margin-top: 20px;
+  font-family: Arial;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 
 .profile img {
-  height: 100%;
+  height: 20vw;;
   object-fit: cover;
-  clip-path: url(#blob-frame);
   width: 100%;
-  border-radius: 134px;
+  object-position: 0% 22%;
 }
 
 .reel video, .reel iframe {
@@ -341,19 +401,19 @@ margin-top: -83px;
 }
 
 .reel{
-  padding: 4%;
-  padding-top: 0;
-  width: inherit;
-  position: relative;
-  overflow: hidden;
+    padding-top: 0;
+    padding-left: 10;
+    width: inherit;
+    position: relative;
+    overflow: hidden;
 }
 
 .reel h3 {
   text-align: center;
-  margin-top: 47px;
+  margin-top: 20px;
   letter-spacing: 6px;
   font-size: 35px;
-  margin-bottom: 1%;
+  margin-bottom: 10px;
   font-family: Josefin;
 }
 
@@ -364,16 +424,77 @@ margin-top: -83px;
   height: 200px;
 }
 
+
+@media screen and (max-width: 600px) {
+  .content {grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); padding:1vw;}
+  .profile{display:none;}
+}
+
+.Services {
+  padding-right: 5%;
+  padding-left: 5%;
+}
+
+.Services section{
+  margin-left:5%;
+  height: auto;
+	padding: 15px;
+	color: var(--black);
+  display: block;
+  position: relative;
+  margin-bottom: 4em;
+}
+
+.Services .backsplash {
+  background-color: var(--footer);
+  transform: skewX(8deg);
+  width: 92%;
+  height: 100%;
+  display: inherit;
+  position: absolute;
+  z-index: -3;
+  border: 3px solid var(--cyanHover);
+}
+
+.Services p{
+  text-align: justify;
+  font-size: 23px;
+  margin-bottom: 0rem;
+  line-height: 26px;
+}
+
+.Services .title {
+  margin-bottom: 0.2em;
+  color: var(--cyanHover);
+  font-family: 'Josefin';
+  font-size: 35;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.Services .textBackground{
+  background-color: var(--background);
+  transform: skewX(-6deg);
+  width: 105%;
+  height: 56%;
+  display: inherit;
+  position: absolute;
+  z-index: -3;
+  translate: -6% -3%;
+}
+
 /* Projects */
 
 .Projects {
 	padding: 8%;
-	padding-top: 3%;
-  padding-right: 10%;
-  padding-left: 10%;
+	padding-top: 4%;
+  padding-right: 6%;
+  padding-left: 6%;
+  overflow: hidden;
 }
 
-.Projects a{
+
+.Projects a, .Services a{
   margin-bottom: 0.2em;
   color: #e6e1d4;
   font-family: 'Josefin';
@@ -384,11 +505,11 @@ margin-top: -83px;
 .ProjectContent {
   display: grid;
   grid-template-columns: 20% 1fr;
-  gap: 23px;
-  overflow: hidden;
+  /* gap: 23px; */
+  /* overflow: hidden; */
 }
 
-.Projects .shortInfo{
+.Projects .shortInfo, .Services .shortInfo{
   font-style: italic;
   text-align: right;
   position: relative;
@@ -396,7 +517,7 @@ margin-top: -83px;
 .ProjectList {
   padding: 3% 8%;
   overflow: visible;
-  border-right: 6px solid var(--accent1);
+  border-right: 3px solid var(--cyanHover)
 }
   
 .ProjectList h1, .shortsTitle h1{
@@ -423,7 +544,7 @@ margin-top: -83px;
 
 .title {
 	margin-bottom: 0.2em;
-  color: var(--title);
+  color: var(--cyanHover);
   font-family: 'Josefin';
   font-size: 25;
   font-weight: 500;
@@ -461,7 +582,7 @@ ul {
   color: var(--text);	
 }
 
-.Projects section, .shortsGrid section {
+.Projects section, .shortsGrid section{
   margin-left:5%;
   margin-right:5%;
   height: auto;
@@ -482,20 +603,21 @@ ul {
 .Projects iframe, .shortsGrid iframe {
   width:100%;
   aspect-ratio: 16/9;
-  border: 6px solid var(--accent1);
+
 }
 
-.Projects .backsplash, .shortsGrid .backsplash {
-  background-color: var(--accent1);
+.Projects .backsplash, .shortsGrid .backsplash{
+  background-color: var(--footer);
   transform: skewX(16deg);
   width: 89%;
   height: 97%;
   display: inherit;
   position: absolute;
   z-index: -3;
+  border: 3px solid var(--cyanHover);
 }
 
-.Projects title, .shortsGrid title{
+.Projects title, .shortsGrid title, .Services title, .ContactForm title{
   text-align: left;
   font-family: Josefin;
   font-weight: bold;
@@ -503,7 +625,7 @@ ul {
   text-transform: uppercase;
 }
 
-.Projects .undertitle, .shortsGrid .undertitle{
+.Projects .undertitle, .shortsGrid .undertitle, .Services .undertitle{
   text-align: right !important;
   font-size: 17px !important;
   color: var(--accent2) !important;
@@ -513,8 +635,8 @@ ul {
 }
 
 .Projects p, .shortsGrid p{
-  text-align: justify;
-  font-size: 15px;
+  text-align: left;
+  font-size: 18px;
   margin-bottom: 0rem;
 }
 
@@ -524,6 +646,20 @@ ul {
   position: relative;
   width: 90%;
   translate: 20px 0px;
+}
+
+.Services .description {
+  padding-bottom: 2%;
+  margin-bottom: 2%;
+  position: relative;
+  width: 80%;
+  translate: 70px 0px;
+}
+
+.Services .headerTitle{
+  font-size: 2em;
+  font-style: italic;
+  color: var(--cyanHover);
 }
 
 .textBackground{
@@ -569,6 +705,12 @@ ul {
   }
   .Projects .description{width:100%;}
   .Projects .backsplash{width:100%; height:100%; transform: skewX(8deg);}
+  .Services .description {width: 100%; translate: 0px 0px;}
+  .Services .backsplash{width:100%; height:100%; transform: skewX(4deg);}
+  .Services {margin-left:5%; margin-right:5%; padding:0%; overflow:hidden}
+  .Services p {font-size: 18px; line-height: 23px;}
+  .Services .textBackground {translate: -2% -3%;}
+  .Services section{padding: 0;}
 }
 
 
@@ -578,7 +720,7 @@ ul {
 .shortsTitle {
   padding: 3px 24px;
   overflow: visible;
-  border-bottom: 6px solid var(--accent1);
+  border-bottom: 3px solid var(--cyanHover);
 }
 
 .shortsGrid {
@@ -612,19 +754,161 @@ ul {
 }
 
 .shortsContent video{
-	width: 100%;
-  border: 6px solid var(--accent1);
+	width: 66%;
+  margin: 0 auto;
+  display: block;
 }
 
 .Projects img{
 	width: 100%;
-  border: 6px solid var(--accent1);
 }
 
 .shortContainer iframe{
   border: 0px;
   width: 100%;
   aspect-ratio: 16 / 9;
+}
+
+/* Popup container - can be anything you want */
+#BlurPage{
+  visibility: hidden;
+  width: 100vw;
+  height: 100%;
+  display: block;
+  position: fixed;
+  z-index: 1;
+  transition: 0.2s;
+  
+}
+
+#BlurPage.show{
+  visibility: visible;
+  backdrop-filter: grayscale(80%);
+  transition: 0.2s;
+  backdrop-filter: blur(2px);
+}
+
+
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 100%;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  background-color: #2e506b;
+  color: #fff;
+  z-index: 1;
+  position: fixed;
+  top: 0px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: auto; 
+  border: 5px solid var(--cyanHover);
+  cursor: default;
+  transition: cubic-bezier(.76,.05,.86,.06) 0.2s;
+  padding: 20px;
+}
+
+.popuptext .title{
+  margin-bottom: 0.2em;
+  font-family: 'Josefin';
+  font-size: 35;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-top: 0;
+  color:unset;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  animation: fadeIn 0.2s;
+  top: 35%;
+  transition: cubic-bezier(.25,.46,.45,.94) 0.2s;
+  
+}
+
+button{
+  display: block;
+  appearance: none;
+  background: #29394a;
+  font: inherit;
+    font-size: inherit;
+    font-family: inherit;
+  padding: 8px;
+  font-family: 'Josefin';
+  border: 3px solid #2e506b;
+  font-size: 17px;
+  color: #fff;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+button:hover {
+  transition: 0.2s;
+  padding-right: 25px;
+  transition: 0.2s;
+  padding-left: 25;
+  border: 3px solid var(--cyanHover);
+}
+
+.CloseButton{
+  margin-bottom: -40px;
+  margin-left: auto;
+  border: 3px solid var(--cyanHover);
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.CloseButton:hover {
+  padding-right: 25px;
+  transition: 0.2s;
+  padding-left: 25;
+}
+
+
+.ProductionTable td:first-child {
+  padding-left: 16px;
+  text-align: right;
+  font-weight: bold;
+  padding-right: 13px;
+  color: var(--cyanHover);
+}
+
+
+.ContactForm{
+  display: block;
+  margin-left: 8%;
+}
+
+.ContactForm p{
+  font-family: arial;
+}
+
+.ContactForm h2{
+  margin: 16px -50 0;
+  font-size: 1.7vw;
+  letter-spacing: 2px;
+  text-align: left;
+  font-family: Josefin;
+}
+
+.ContactForm .title{
+  font-size: 38px;
+  display: block;
+  font-family: Ariel;
+  font-weight: bold;
+  text-transform: unset;
+  margin-bottom: 0;
+  color: unset;
 }
 
 /* FOOTER*/
@@ -646,7 +930,8 @@ ul {
 }
 
 .FooterInfo p{
-  font-size: 18px;
+  font-size: 15px;
+  font-family: Arial;
 }
 
 .CopyrightDisclaimer {

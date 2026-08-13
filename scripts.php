@@ -43,7 +43,7 @@
 				</p>
 			</div>
 			<img  src ="images/kfpro_thumb.png" ></img>
-			<p class="undertitle"> <a href="https://superhivemarket.com/products/quadblaster"> Visit store page!</a> </p>
+			<p class="undertitle"> <a href="https://superhivemarket.com/products/blender-to-keyframe-pro--link-blenders-timeline-with-a-keyframe-project"> Visit store page!</a> </p>
 		</section>
 
 
