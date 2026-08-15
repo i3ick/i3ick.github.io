@@ -9,6 +9,7 @@
 
 <body>
 
+<div class ="scroll-anchor" id="PageTop"></div>
 <div w3-include-html="navbar.html"></div>
 
 <main class="ProjectContent">
@@ -16,10 +17,12 @@
 	<div style="position: sticky; top: 20;">
 	<h1>Projects</h1>
 	<ul>
-		<li><a class="project-nav-item" onclick="document.getElementById('Dune').scrollIntoView();"   >Dune Awakening</a></li>
+		<li><a class="project-nav-item" onclick="document.getElementById('PageTop').scrollIntoView();"   >Dune Awakening</a></li>
 		<li><a class="project-nav-item" onclick="document.getElementById('LegoBrawls').scrollIntoView();" >LEGO Brawls</a></li>
 		<li><a class="project-nav-item" onclick="document.getElementById('Fallguys').scrollIntoView();"  >FallGuys</a></li>
+		<!--
 		<li><a class="project-nav-item" onclick="document.getElementById('Loccitane').scrollIntoView();"  >L'Occitane Xmas Ad</a></li>
+	    -->
 		<li><a class="project-nav-item" onclick="document.getElementById('Sfar').scrollIntoView();"   >Joann Sfar TV series</a></li>
 	</ul>
 	</div>
@@ -90,7 +93,8 @@
 		</section>
 		
 				
-		<!-- Project -->
+		<!--
+
 		<div class="scroll-anchor" id="Loccitane"></div>
 		<section>
 			<div class ="backsplash"> </div>
@@ -105,6 +109,8 @@
 			<p class="undertitle"> 2D Animation Cleanup & Fixes 2021 </p>
 			
 		</section>
+
+	-->
 		
 						
 		<!-- Project -->
@@ -127,7 +133,7 @@
 		<p class="undertitle">  Production Design, 2020 </p>
 		</section>
 		
-
+	
 		
 		
 	</content>
@@ -135,7 +141,7 @@
 
 </main>
 
-<div w3-include-html="footer.html"></div>
+<div class="footerLoader" w3-include-html="footer.html"></div>
 <script>
     w3.includeHTML();
 </script>

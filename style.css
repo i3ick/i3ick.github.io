@@ -287,7 +287,7 @@ iframe{
 }
 
 .logo {
-  margin-right: 12vw;
+  margin-right: 5vw;
   position: relative;
   color: var(--cyan);
   font-weight: bold;
@@ -394,10 +394,14 @@ iframe{
   object-position: 0% 22%;
 }
 
-.reel video, .reel iframe {
+.reel video, .reel iframe, .reel img {
   border: 0;
   width: 100%;
   aspect-ratio: 16 / 9;
+}
+
+.reel img{
+  position: absolute;
 }
 
 .reel{
@@ -578,8 +582,8 @@ ul {
 }
 
 .Projects section, .shortsGrid section{
-  margin-left:5%;
-  margin-right:5%;
+  margin-left:6%;
+  margin-right: 8%;
   height: auto;
 	padding: 15px;
 	color: var(--black);
@@ -627,6 +631,10 @@ ul {
   font-family: Josefin;
   font-weight: 400 !important;
   margin-top: 2%;
+}
+
+.undertitle a{
+  text-decoration: none;
 }
 
 .Projects p, .shortsGrid p{
@@ -881,19 +889,25 @@ button:hover {
 
 .ContactForm{
   display: block;
-  margin-left: 8%;
+  overflow: hidden;
+  text-align: center;
+  margin: auto;
 }
 
 .ContactForm p{
   font-family: arial;
+  font-style: italic;
 }
 
+.ContactForm a{
+  text-decoration: none;
+}
 .ContactForm h2{
-  margin: 16px -50 0;
-  font-size: 1.7vw;
+  font-size: 3.2vw;
   letter-spacing: 2px;
   text-align: left;
   font-family: Josefin;
+  width: 100%;
 }
 
 .ContactForm .title{
@@ -904,16 +918,28 @@ button:hover {
   text-transform: unset;
   margin-bottom: 0;
   color: unset;
+  font-family: Fredoka;
+  color: var(--accent2);
+}
+
+.contactTitle{
+  font-style: italic;
+  margin-left: 5vw;
+  font-family: Arial;
 }
 
 /* FOOTER*/
+.footerLoader {
+display: contents;
+}
+
 .footer {
   background: var(--footer);
   padding: 15px;
   overflow: visible;
   display: grid;
   grid-template-columns: 30% 1fr;
-  gap: 30px;
+  gap: wvw;
   margin-top: auto;
 }
 

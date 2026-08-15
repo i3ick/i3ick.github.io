@@ -8,7 +8,7 @@
 
 <body>
 
-
+<div class ="scroll-anchor" id="PageTop"></div>
 <div w3-include-html="navbar.html"></div>
 
 <main class="ProjectContent">
@@ -16,7 +16,7 @@
 	<div style="position: sticky; top: 20;">
 	<h1>Tools</h1>
 	<ul>
-		<li><a class="project-nav-item" onclick="document.getElementById('KPSync').scrollIntoView();"   >Keyframe Pro Sync</a></li>
+		<li><a class="project-nav-item" onclick="document.getElementById('PageTop').scrollIntoView();"   >Keyframe Pro Sync</a></li>
 		<li><a class="project-nav-item" onclick="document.getElementById('Quadblaster').scrollIntoView();" >Quadblaster</a></li>
 	</ul>
   <h2>Open Source:</h2>
@@ -45,7 +45,10 @@
 				</p>
 			</div>
 			<img  src ="images/kfpro_thumb.png" ></img>
-			<p class="undertitle"> <a href="https://superhivemarket.com/products/blender-to-keyframe-pro--link-blenders-timeline-with-a-keyframe-project"> Visit store page!</a> </p>
+			<p class="undertitle"> 
+				<a href="https://superhivemarket.com/products/blender-to-keyframe-pro--link-blenders-timeline-with-a-keyframe-project"> 
+			<button>Store Page</button></a>
+			</p>
 		</section>
 
 
@@ -64,7 +67,8 @@
 				</p>
 			</div>
       <img  src ="images/Quadblaster_thumb.png" ></img>
-			<p class="undertitle"><a href="https://superhivemarket.com/products/quadblaster"> Visit store page!</a>  </p>
+			<p class="undertitle"><a href="https://superhivemarket.com/products/quadblaster">
+			<button>Store Page</button></a></p>
 		</section>
 
 
@@ -82,7 +86,7 @@
 				</p>
 			</div>
 			<img  src ="images/CCB_thumb.png" ></img>
-			<p class="undertitle"> <a href=""> Download from Github!</a> </p>
+			<p class="undertitle"> <a href=""> <button>Soon!</button></a> </p>
 		</section>
 
 
@@ -92,7 +96,7 @@
 
 
 
-<div w3-include-html="footer.html"></div>
+<div class="footerLoader" w3-include-html="footer.html"></div>
 
 <script>
     w3.includeHTML();
