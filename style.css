@@ -418,11 +418,6 @@ iframe{
 }
 
 
-.svg .img {
-  href: url("/images/P1010436.png");   /* modern browsers */
-  width: 200px;
-  height: 200px;
-}
 
 
 @media screen and (max-width: 600px) {
