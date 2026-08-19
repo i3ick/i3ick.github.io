@@ -891,7 +891,7 @@ button:hover {
   display: block;
   overflow: hidden;
   text-align: center;
-  margin: auto;
+
 }
 
 .ContactForm p{
@@ -926,6 +926,64 @@ button:hover {
   font-style: italic;
   margin-left: 5vw;
   font-family: Arial;
+}
+
+.ClientContainer{
+  padding-left: 5vw;
+  padding-right: 5vw;
+  margin-bottom: 10vh;
+}
+
+.ClientContainer .title{
+  color:unset;
+  font-family: 'Josefin';
+  font-size: 30;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 10vh;
+  text-align: left;
+}
+
+.ContactContainer{
+  padding-left: 10vw;
+  padding-right: 10vw;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  display: grid;
+  grid-template-columns: 35% auto;
+}
+
+.CV{
+  display: block;
+  overflow: hidden;
+  text-align: left;
+  margin-top: auto;
+  min-width: 60%;
+}
+
+.centerHorizontally{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.centerTextHorizontally{
+  text-align: center;
+}
+
+.ContactContainer a{
+  text-decoration: none;
+}
+
+.IconContainer {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  gap: 3vw;
+}
+.IconContainer img{
+  width: 15vw;
+  object-fit: contain;
+  max-height: 8vw;
+  margin: auto;
 }
 
 /* FOOTER*/
