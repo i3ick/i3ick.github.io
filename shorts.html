@@ -2,6 +2,7 @@
 <head>
 	<script src="https://www.w3schools.com/lib/w3.js"></script>
 	<script src="Hamburger_menu.js"></script>
+	<script src="https://player.vimeo.com/api/player.js"></script>
   <meta charset="UTF-8" />
   <title>Kazun – Shorts</title>
   <link rel="stylesheet" href="style.css" />
@@ -30,11 +31,14 @@
 					Short Animation based on Joann Sfar's comic.
 				</p>
 			</div>
+			<div class="ShortsVideoContainer">
 				<video  autoplay muted playsinline>
   				<source src="https://kpavicic.com/videos/aspirine_crop.mp4" type="video/mp4">
 videos/karlo_PAVICIC_RAVLIC_Cinematic_2025_spring.mp4
 				</video>
+			</div>
 			<p class="undertitle"> 2D Animation, 3", 2019 </p>
+
 			<div class="popup">
 				<button onclick="openPopUp('infoPopup1')">Production info</button>
 				<span class="popuptext" id="infoPopup1">
@@ -74,8 +78,11 @@ videos/karlo_PAVICIC_RAVLIC_Cinematic_2025_spring.mp4
 					Promo video for a personal project which is in development.
 				</p>
 			</div>
+			<div class="ShortsVideoContainer">
 				<iframe class="embed-responsive-item" src="https://player.vimeo.com/video/344763716" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			<p class="undertitle"> 3D Animation, 3", 2020 </p>
+			</div>
+			
+				<p class="undertitle"> 3D Animation, 3", 2020 </p>
 		</section>
 
 				<!-- Short -->
@@ -90,8 +97,10 @@ videos/karlo_PAVICIC_RAVLIC_Cinematic_2025_spring.mp4
 					Graduation short about a young Polish partisan fleeing from the Warsaw Uprising.
 				</p>
 			</div>
+			<div class="ShortsVideoContainer">
 				<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/TUYq6dh1nI0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			<p class="undertitle"> 2D Animation, 3", 2019 </p>
+			</div>
+				<p class="undertitle"> 2D Animation, 3", 2019 </p>
 				<div class="popup">
 				<button onclick="openPopUp('infoPopupDogs')">Production info</button>
 				<span class="popuptext" id="infoPopupDogs">
@@ -187,6 +196,32 @@ function closeAllPopups() {
 
 <script>
     w3.includeHTML();
+</script>
+
+<script>
+
+	document.querySelectorAll('.ShortsVideoContainer iframe').forEach(iframe => {
+  const player = new Vimeo.Player(iframe);
+
+  Promise.all([
+    player.getVideoWidth(),
+    player.getVideoHeight()
+  ]).then(([width, height]) => {
+    const ratio = width / height;
+
+    iframe.style.aspectRatio = `${width} / ${height}`;
+
+    if (ratio >= 1) {
+      // Landscape
+      iframe.style.width = '100%';
+      iframe.style.height = 'auto';
+    } else {
+      // Portrait
+      iframe.style.height = '100%';
+      iframe.style.width = 'auto';
+    }
+  });
+});
 </script>
 
 </body>
