@@ -524,7 +524,7 @@ iframe{
   translate: 0% -20%;
 }
 
-.Services .textBackground{
+.textBackground{
   background-color: var(--background);
   transform: skewX(-6deg);
   width: 124%;
@@ -540,6 +540,7 @@ iframe{
   width: 80%;
   margin-left: auto;
   margin-right: auto;
+  padding-right: 5%;
 }
 
 .Gallery{
@@ -610,8 +611,8 @@ iframe{
 .Projects {
 	padding: 8%;
 	padding-top: 4%;
-  padding-right: 6%;
-  padding-left: 6%;
+  padding-right: 8%;
+  padding-left: 8%;
   overflow: hidden;
 }
 
@@ -714,8 +715,6 @@ ul {
 }
 
 .Projects section, .shortsGrid section{
-  margin-left:6%;
-  margin-right: 8%;
 	padding: 15px;
 	color: var(--black);
   position: relative;
@@ -745,7 +744,7 @@ aspect-ratio: 16/9;
 
 .Projects .backsplash, .shortsGrid .backsplash{
   background-color: var(--footer);
-  transform: skewX(16deg);
+  transform: skewX(8deg);
   width: 89%;
   height: 97%;
   display: inherit;
@@ -802,16 +801,7 @@ aspect-ratio: 16/9;
   font-style: italic;
 }
 
-.textBackground{
-  background-color: var(--background);
-  transform: skewX(-6deg);
-  width: 110%;
-  height: 100%;
-  display: inherit;
-  position: absolute;
-  z-index: -3;
-  translate: -5% -5%;
-}
+
 
 .decoLines{
   transform: skewX(-6deg);
