@@ -777,7 +777,7 @@ aspect-ratio: 16/9;
 .Projects p, .shortsGrid p{
   text-align: left;
   font-size: var(--step-1);
-  margin-bottom: 0rem;
+  margin-bottom: 1.2rem;
 }
 
 .description {
