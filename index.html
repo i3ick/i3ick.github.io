@@ -4,6 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://www.w3schools.com/lib/w3.js"></script>
 <script src="Hamburger_menu.js"></script>
+<script src="imagecomp.js"></script>
   <meta charset="UTF-8" />
   <title>Kazun – Animator</title>
   <link rel="stylesheet" href="style.css" />
@@ -20,6 +21,7 @@
   <div class="logo">
     <p class="logoSubtitles">Animation, Mocap cleanup,</p>
 	<p class="logoSubtitles">and Education services!</p>
+	<p class="logoSubtitles" style="font-size: var(--step--1);color: var(--cyan);text-align: center;">Zagreb, Croatia </p>
 
   </div> 
     <video class="video" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" >
@@ -32,24 +34,17 @@
 <main class="content">
   <aside class="profile">
 	<div class="profileContent">
-		<h2>Karlo</h2>
-		<div class="lastName">Pavičić Ravlić</div>
-		<p> 📍 Zagreb, Croatia </p>
 		<div><img src="/images/P1010436.png"> </img></div>
-
-		<p>
-		Animator, Tech Anim, Visdev, Teacher, Cat Enthusiast 
-
-		</p>
-
+		<div class="name">
+		<p>CGI Animator</p>
+		<h2>KARLO</h2>
+		<div class="lastName">Pavičić Ravlić</div>
+		</div>
 	</div>
-	
-	
   </aside>
 
   <section class="reel">
-		<img src="images/web_thumb.png" class="thumbnail" onclick=loadVideo(this)>
-
+		<img src="images/web_thumb3.png" class="thumbnail" onclick=loadVideo(this)>
   </section>
 
 </main>
@@ -58,7 +53,45 @@
 
 
 		<section class="Services">
-			<h2 class="headerTitle">Let's work together!</h2>
+			<h2 class="headerTitle"></h2>
+
+			<!-- ANIMATION SERVICES -->
+
+			<section>
+				<div class ="backsplash"> </div>
+				<div class ="description"> 
+					<div class ="textBackground"> </div>
+					<!-- <div class ="decoLines"> </div> -->
+					<div class ="title">Animation Services</div>
+				</div>
+				<div class ="Bonus"> 
+
+					<h3> Top-Tier keyframe animation </h3>
+					<p>
+						My work has been featured in many cinematic trailers for AAA games and in Netflix animated series.
+						If you're in need for expressive, exaggarated, or cartoony animation which focuses on body dynamics
+						you're already in the right place as that's my game. Bring me on board and let's see what we can
+						create together!
+
+					</p>
+
+					<a href="/projects.html"><button>See Projects</button></a>
+
+					<h3> Team Training</h3>
+					<p>
+						The base of any good work is a strong grasp of fundamentals. As a teacher with multiple years
+						of experience educationg a range of ages I can tell you that ever professionals often know how
+						to use a certain workflow but don't actually understand why certain math works the way it does
+						under the hood.
+
+
+					</p>
+
+
+					<a href="mailto:info@kpavicic.com"><button>Reach Out ✉️</button></a>
+
+				</div>
+			</section>
 
 			<section>
 
@@ -67,48 +100,68 @@
 					<div class ="textBackground"> </div>
 					<!-- <div class ="decoLines"> </div> -->
 					<div class ="title">Visual Development</div>
-					<p>
-						Don't need animation work yet? You're in preprod and still aren't sure on the visual style?
-						We can help here as well! Get us on board early and we can work together to figure out the
-						style, mood, and colorsheet to make your project stand out among the competition.
-						For a visdev phase we reach out to our friends in the industry and we assemble a team.
+				
+				</div>
+
+				<div class ="Bonus"> 
+				<h3>
+				Don't need animation work yet? You're in preprod and still aren't sure on the visual style?
+				</h3>
+				<p>
+					I can help here as well! We'll work together to figure out the
+					style, mood, and colorsheet needed to make your project stand out among the competition.
+					You're in need of a team with industry experience? No problem! My contacts are exerienced
+					animators and visdev artists who regularly work in VFX and TV production.
 
 
-					</p>
+				</p>
 
 					<div class="w3-container" style="margin-top:20px">
 
-						<div class="w3-content" style="max-width:100%">
-
 						<div class="w3-row-padding w3-section">
-							<div class="w3-col s4">
-							<img class="demo w3-opacity w3-hover-opacity-off" src="/images/3DTEST_L.png" style="width:100%;cursor:pointer" onclick="currentDiv(1)">
-							</div>
-							<div class="w3-col s4">
-							<img class="demo w3-opacity w3-hover-opacity-off" src="/images/Singer.png" style="width:100%;cursor:pointer" onclick="currentDiv(2)">
-							</div>
-							
-							<div class="w3-col s4">
-							<img class="demo w3-opacity w3-hover-opacity-off" src="/images/BigBird_00032.png" style="width:100%;cursor:pointer" onclick="currentDiv(3)">
-							</div>
+						<div class="Gallery">
+							<img class="mySlides" src="/images/3DTEST_L.png" style="width:100%">
+							<img class="mySlides" src="/images/Singer.png" style="width:100%;display:none">
+							<img class="mySlides" src="/images/BigBird_00032.png" style="width:100%;display:none">
+						</div>
 
-						<img class="mySlides" src="/images/3DTEST_L.png" style="width:100%">
-						<img class="mySlides" src="/images/Singer.png" style="width:100%;display:none">
-						<img class="mySlides" src="/images/BigBird_00032.png" style="width:100%;display:none">
+						<div class="GalleryThumbs">
+								<img class="demo w3-opacity w3-hover-opacity-off" src="/images/3DTEST_L.png" style="width:100%;cursor:pointer" onclick="currentDiv(1)">
+								<img class="demo w3-opacity w3-hover-opacity-off" src="/images/Singer.png" style="width:100%;cursor:pointer" onclick="currentDiv(2)">
+								<img class="demo w3-opacity w3-hover-opacity-off" src="/images/BigBird_00032.png" style="width:100%;cursor:pointer" onclick="currentDiv(3)">
+						</div>
+					    </div>
+				    </div>
+				</div>
+			</section>
 
-					</div>
 
+			<!--
+			<section>
 
+				<div class ="backsplash"> </div>
+				<div class ="description"> 
+					<div class ="textBackground"> </div>
+					<div class ="title">Modeling</div>
+					<p>
+					</p>
+				</div>
+			</section>
+		-->
+
+			<section class="ClientContainer">
+				<div class ="title">Clients</div>
+				<div class="IconContainer">
+					<img  src="/images/Logos/primerenderstudios_logo_novi_02_bijeli-768x333.png">
+					<img src="/images/Logos/66d04ec87e2b3bd49fa8f4ce_BF_Logo_V2_White_Round.png">
+					<img src="/images/Logos/CMR logo B bijeli transparentna podloga.png">
+					<img src="/images/Logos/amulet_logo.png">
 
 
 				</div>
 			</section>
 
-
-
 		</section>
-
-
 	</section>
 
 
@@ -140,6 +193,7 @@
 
 <script>
     w3.includeHTML();
+	initComparisons();
 </script>
 
 <script>
