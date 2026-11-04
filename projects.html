@@ -11,11 +11,11 @@
 <body>
 
 <div class ="scroll-anchor" id="PageTop"></div>
-<div w3-include-html="navbar.html"></div>
+<div class="navbar" w3-include-html="navbar.html"></div>
 
 <main class="ProjectContent">
 	<aside class="ProjectList">
-	<div style="position: sticky; top: 20;">
+	<div class="StickyMenu">
 	<h1>Projects</h1>
 	<ul>
 		<li><a class="project-nav-item" onclick="document.getElementById('PageTop').scrollIntoView();"   >Dune Awakening</a></li>
@@ -171,6 +171,18 @@
 <div class="footerLoader" w3-include-html="footer.html"></div>
 <script>
     w3.includeHTML();
+
+
+	const navbar = document.querySelector(".navbar");
+
+	const observer = new ResizeObserver(([entry]) => {
+	document.documentElement.style.setProperty(
+		"--navbar-height",
+		`${entry.contentRect.height}px`
+	);
+	});
+
+observer.observe(navbar);
 </script>
 
 

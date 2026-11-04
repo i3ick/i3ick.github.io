@@ -23,6 +23,8 @@
   --step-3: clamp(1.836rem, 1.7446rem + 0.39vw, 2.3686rem);
   --step-4: clamp(2.2032rem, 2.0394rem + 0.6987vw, 3.1573rem);
   --step-5: clamp(2.6438rem, 2.3753rem + 1.1459vw, 4.2087rem);
+
+  --navbar-height: 0px;
 }
 
 :root {
@@ -522,7 +524,7 @@ iframe{
 .textBackground{
   background-color: var(--background);
   transform: skewX(-6deg);
-  width: 124%;
+  width: 101%;
   height: 69%;
   display: inherit;
   position: absolute;
@@ -648,9 +650,15 @@ iframe{
   position: relative;
 }
 .ProjectList {
-  padding: 3% 8%;
+  padding: 0% 8%;
   overflow: visible;
   border-right: 3px solid #d56f9f;
+}
+
+.StickyMenu{
+  position: sticky;
+  top: var(--navbar-height);
+  overflow: hidden;
 }
   
 .ProjectList h1, .shortsTitle h1{
@@ -800,7 +808,7 @@ aspect-ratio: 16/9;
   padding-bottom: 2%;
   margin-bottom: 2%;
   position: relative;
-  width: 80%;
+  width: 100%;
   translate: 70px 0px;
 }
 

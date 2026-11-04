@@ -10,11 +10,11 @@
 <body>
 
 <div class ="scroll-anchor" id="PageTop"></div>
-<div w3-include-html="navbar.html"></div>
+<div class="navbar" w3-include-html="navbar.html"></div>
 
 <main class="ProjectContent">
 	<aside class="ProjectList">
-	<div style="position: sticky; top: 20;">
+	<div class="StickyMenu">
 	<h1>Tools</h1>
 	<ul>
 		<li><a class="project-nav-item" onclick="document.getElementById('PageTop').scrollIntoView();"   >Keyframe Pro Sync</a></li>
@@ -39,17 +39,19 @@
 				<div class ="textBackground"> </div>
 				<!-- <div class ="decoLines"> </div> -->
 				<div class ="title">Keyframe Pro Sync</div>
+			</div>
+			<div class ="Bonus"> 
 				<p>
           Keyframe Pro Sync is a professional studio tool for animators working with reference footage. 
           It creates a seamless work environment which doesn't require the user to switch between software 
            execute actions such as adjusting the current frame, importing bookmarks, starting playback, or scrubbing.
 				</p>
-			</div>
 			<img  src ="images/kfpro_thumb.png" ></img>
 			<p class="undertitle"> 
 				<a href="https://superhivemarket.com/products/blender-to-keyframe-pro--link-blenders-timeline-with-a-keyframe-project"> 
 			<button>Store Page</button></a>
 			</p>
+		</div>
 		</section>
 
 
@@ -61,15 +63,17 @@
 				<div class ="textBackground"> </div>
 				<!-- <div class ="decoLines"> </div> -->
 				<div class ="title">Quadblaster </div>
+				</div>
+			<div class ="Bonus"> 
 				<p>
 					Quadblaster is a tool I've written to make playblasting with multiple views, notes, and 
           compressing the file a breeze. It contains essential production burnt in metadata such as the animatos name, shot phase,
           date, notes, frame count, DCC frame count, and more
 				</p>
-			</div>
       <img  src ="images/Quadblaster_thumb.png" ></img>
 			<p class="undertitle"><a href="https://superhivemarket.com/products/quadblaster">
 			<button>Store Page</button></a></p>
+			</div>
 		</section>
 
 
@@ -81,13 +85,15 @@
 				<div class ="textBackground"> </div>
 				<!-- <div class ="decoLines"> </div> -->
 				<div class ="title">Clean Cycle Bake</div>
+				</div>
+			<div class ="Bonus"> 
 				<p>
 					Clean Cycle Bake is a tool which bakes down f-curves with modifiers or offset animation into a specified range all while
           preserving f-curve point handles. Essential for baking game animation loops.
 				</p>
-			</div>
 			<img  src ="images/CCB_thumb.png" ></img>
 			<p class="undertitle"> <a href=""> <button>Soon!</button></a> </p>
+			</div>
 		</section>
 
 
@@ -101,6 +107,17 @@
 
 <script>
     w3.includeHTML();
+
+	const navbar = document.querySelector(".navbar");
+
+	const observer = new ResizeObserver(([entry]) => {
+	document.documentElement.style.setProperty(
+		"--navbar-height",
+		`${entry.contentRect.height}px`
+	);
+	});
+
+observer.observe(navbar);
 </script>
 </body>
 </html>
