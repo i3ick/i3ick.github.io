@@ -1,7 +1,7 @@
 <html lang="en">
 <head>
-<script src="https://www.w3schools.com/lib/w3.js"></script>
-<script src="Hamburger_menu.js"></script>
+<script src="https://www.w3schools.com/lib/w3.js" defer></script>
+<script src="Hamburger_menu.js" defer></script>
   <meta charset="UTF-8" />
   <title>Kazun – Scripts</title>
   <link rel="stylesheet" href="style.css" />
@@ -106,8 +106,9 @@
 <div class="footerLoader" w3-include-html="footer.html"></div>
 
 <script>
+    	document.addEventListener("DOMContentLoaded", () => {
     w3.includeHTML();
-
+	
 	const navbar = document.querySelector(".navbar");
 
 	const observer = new ResizeObserver(([entry]) => {
@@ -118,6 +119,8 @@
 	});
 
 observer.observe(navbar);
+});
+
 </script>
 </body>
 </html>

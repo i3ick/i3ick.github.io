@@ -1,8 +1,8 @@
 
 <html lang="en">
 <head>
-<script src="https://www.w3schools.com/lib/w3.js"></script>
-<script src="Hamburger_menu.js"></script>
+<script src="https://www.w3schools.com/lib/w3.js" defer></script>
+<script src="Hamburger_menu.js" defer></script>
   <meta charset="UTF-8" />
   <title>Kazun – Animator</title>
   <link rel="stylesheet" href="style.css" />
@@ -47,7 +47,7 @@
 					Responsible for hand keyed character animation. Animation Lead: Aiden Young 
 
 				</p>
-				<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Ud3EW5aAUZ8?si=ZOrfC4uuqw88y6o8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Ud3EW5aAUZ8?si=ZOrfC4uuqw88y6o8" frameborder="0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			<p class="undertitle"> 3D Animation, 2024 </p>
 			</div>
 		</section>
@@ -64,7 +64,7 @@
 				<p>
 					I was one of the two animators on this short children film.
 				</p>
-				<iframe class="embed-responsive-item"  src="https://www.youtube.com/embed/459qzQ7yf6k?si=K9WIa2vVS2PNPLiN" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<iframe class="embed-responsive-item"  src="https://www.youtube.com/embed/459qzQ7yf6k?si=K9WIa2vVS2PNPLiN" frameborder="0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		<p class="undertitle"> 3D Animation, 2024 </p>
 		</div>
 		
@@ -85,7 +85,7 @@
 
 				</p>
 
-				<iframe class="embed-responsive-item"  src="https://www.youtube.com/embed/t31--iHG99w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<iframe class="embed-responsive-item"  src="https://www.youtube.com/embed/t31--iHG99w" frameborder="0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		<p class="undertitle"> 3D Animation, 2022 </p>
 			</div>
 		</section>
@@ -107,10 +107,10 @@
 				</p>
 				
 			<div class="text-center">
-				<iframe class="embed-responsive-item" width="340" height="180" src="https://www.youtube.com/embed/pqpvBzCgJQM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				<iframe class="embed-responsive-item" width="340" height="180" src="https://www.youtube.com/embed/rHf1y_A8ez0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				<iframe class="embed-responsive-item" width="340" height="180" src="https://www.youtube.com/embed/qNxqE52ZN-8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				<iframe class="embed-responsive-item" width="340" height="180" src="https://www.youtube.com/embed/SUK4is4QweM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<iframe class="embed-responsive-item" width="340" height="180" src="https://www.youtube.com/embed/pqpvBzCgJQM" frameborder="0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<iframe class="embed-responsive-item" width="340" height="180" src="https://www.youtube.com/embed/rHf1y_A8ez0" frameborder="0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<iframe class="embed-responsive-item" width="340" height="180" src="https://www.youtube.com/embed/qNxqE52ZN-8" frameborder="0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<iframe class="embed-responsive-item" width="340" height="180" src="https://www.youtube.com/embed/SUK4is4QweM" frameborder="0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
 
 			<p class="undertitle"> 3D Animation and assistance, 2020,2021 </p>
@@ -155,7 +155,7 @@
 				wait to be able to share the work we've done. Currently all the content is under NDA, so bellow you will find the
 				short animation that got us this job after Joann Sfar noticed it on Twitter.
 				</p>
-		<iframe class="embed-responsive-item" width="100%" src="https://kpavicic.com/videos/aspirine_crop.mp4" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border:0px;"></iframe>
+		<iframe class="embed-responsive-item" width="100%" src="https://kpavicic.com/videos/aspirine_crop.mp4" frameborder="0" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border:0px;"></iframe>
 		<p class="undertitle">  Production Design, 2020 </p>
 		</div>
 		</section>
@@ -170,10 +170,9 @@
 
 <div class="footerLoader" w3-include-html="footer.html"></div>
 <script>
+	document.addEventListener("DOMContentLoaded", () => {
     w3.includeHTML();
-
-
-	const navbar = document.querySelector(".navbar");
+		const navbar = document.querySelector(".navbar");
 
 	const observer = new ResizeObserver(([entry]) => {
 	document.documentElement.style.setProperty(
@@ -182,7 +181,10 @@
 	);
 	});
 
-observer.observe(navbar);
+	observer.observe(navbar);
+});
+
+
 </script>
 
 

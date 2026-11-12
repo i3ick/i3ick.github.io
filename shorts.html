@@ -1,8 +1,8 @@
 <html lang="en">
 <head>
-	<script src="https://www.w3schools.com/lib/w3.js"></script>
-	<script src="Hamburger_menu.js"></script>
-	<script src="https://player.vimeo.com/api/player.js"></script>
+	<script src="https://www.w3schools.com/lib/w3.js" defer></script>
+	<script src="Hamburger_menu.js" defer></script>
+	<script src="https://player.vimeo.com/api/player.js" defer></script>
   <meta charset="UTF-8" />
   <title>Kazun – Shorts</title>
   <link rel="stylesheet" href="style.css" />
@@ -204,7 +204,9 @@ function closeAllPopups() {
 </script>
 
 <script>
+	document.addEventListener("DOMContentLoaded", () => {
     w3.includeHTML();
+});
 </script>
 
 <script>

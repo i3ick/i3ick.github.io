@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script src="https://www.w3schools.com/lib/w3.js"></script>
-<script src="Hamburger_menu.js"></script>
-<script src="imagecomp.js"></script>
+<script src="https://www.w3schools.com/lib/w3.js" defer></script>
+<script src="Hamburger_menu.js" defer></script>
+<script src="imagecomp.js" defer></script>
   <meta charset="UTF-8" />
   <title>Kazun – Animator</title>
   <link rel="stylesheet" href="style.css" />
@@ -119,15 +119,15 @@
 
 						<div class="w3-row-padding w3-section">
 						<div class="Gallery">
-							<img class="mySlides" src="/images/3DTEST_L.png" style="width:100%">
-							<img class="mySlides" src="/images/Singer.png" style="width:100%;display:none">
-							<img class="mySlides" src="/images/BigBird_00032.png" style="width:100%;display:none">
+							<img class="mySlides" src="/images/3DTEST_L.png" loading="lazy" style="width:100%">
+							<img class="mySlides" src="/images/Singer.png" loading="lazy" style="width:100%;display:none">
+							<img class="mySlides" src="/images/BigBird_00032.png" loading="lazy" style="width:100%;display:none">
 						</div>
 
 						<div class="GalleryThumbs">
-								<img class="demo w3-opacity w3-hover-opacity-off" src="/images/3DTEST_L.png" style="width:100%;cursor:pointer" onclick="currentDiv(1)">
-								<img class="demo w3-opacity w3-hover-opacity-off" src="/images/Singer.png" style="width:100%;cursor:pointer" onclick="currentDiv(2)">
-								<img class="demo w3-opacity w3-hover-opacity-off" src="/images/BigBird_00032.png" style="width:100%;cursor:pointer" onclick="currentDiv(3)">
+								<img class="demo w3-opacity w3-hover-opacity-off" src="/images/3DTEST_L.png" loading="lazy" style="width:100%;cursor:pointer" onclick="currentDiv(1)">
+								<img class="demo w3-opacity w3-hover-opacity-off" src="/images/Singer.png" loading="lazy" style="width:100%;cursor:pointer" onclick="currentDiv(2)">
+								<img class="demo w3-opacity w3-hover-opacity-off" src="/images/BigBird_00032.png" loading="lazy" style="width:100%;cursor:pointer" onclick="currentDiv(3)">
 						</div>
 					    </div>
 				    </div>
@@ -151,10 +151,10 @@
 			<section class="ClientContainer">
 				<div class ="title">Clients</div>
 				<div class="IconContainer">
-					<img  src="/images/Logos/primerenderstudios_logo_novi_02_bijeli-768x333.png">
-					<img src="/images/Logos/66d04ec87e2b3bd49fa8f4ce_BF_Logo_V2_White_Round.png">
-					<img src="/images/Logos/CMR logo B bijeli transparentna podloga.png">
-					<img src="/images/Logos/amulet_logo.png">
+					<img src="/images/Logos/primerenderstudios_logo_novi_02_bijeli-768x333.png" loading="lazy">
+					<img src="/images/Logos/66d04ec87e2b3bd49fa8f4ce_BF_Logo_V2_White_Round.png" loading="lazy">
+					<img src="/images/Logos/CMR logo B bijeli transparentna podloga.png" loading="lazy">
+					<img src="/images/Logos/amulet_logo.png" loading="lazy">
 
 
 				</div>
@@ -191,8 +191,10 @@
 <div class="footerLoader" w3-include-html="footer.html"></div>
 
 <script>
+	document.addEventListener("DOMContentLoaded", () => {
     w3.includeHTML();
 	initComparisons();
+});
 </script>
 
 <script>
